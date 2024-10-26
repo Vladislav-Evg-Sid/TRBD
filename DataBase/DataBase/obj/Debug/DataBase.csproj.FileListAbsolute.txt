@@ -36,3 +36,5 @@ E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.cs
 E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.csproj.Up2Date
 E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.exe
 E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.pdb
+E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.FMDI.resources
+E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.Table.resources

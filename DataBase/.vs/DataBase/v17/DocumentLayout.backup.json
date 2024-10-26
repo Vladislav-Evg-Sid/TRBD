@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|e:\\\u043F\u0440\u043E\u0433\u0438\\git\\\u043B\u0430\u0431\u044B\\\u0442\u0440\u0431\u0434\\lab3\\database\\database\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +26,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "DataBase\\Form1.Designer.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Form1.Designer.cs",
               "RelativeToolTip": "DataBase\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADIBAAAAAAAAAAAowBYAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T07:43:17.108Z",
               "EditorCaption": ""
@@ -49,14 +49,14 @@
               "RelativeDocumentMoniker": "DataBase\\Form1.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Form1.cs",
               "RelativeToolTip": "DataBase\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T07:38:00.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Form1.cs",
               "RelativeDocumentMoniker": "DataBase\\Form1.cs",
