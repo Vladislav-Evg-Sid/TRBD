@@ -17,7 +17,7 @@ namespace DataBase
         public Form1()
         {
             InitializeComponent();
-            sqliteConn = new SQLiteConnection("Data Source=bd.db;Version=3;");
+            sqliteConn = new SQLiteConnection("Data Source=AutoPark.db;Version=3;");
             sqliteConn.Open();
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
