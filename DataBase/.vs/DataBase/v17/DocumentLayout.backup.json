@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|e:\\\u043F\u0440\u043E\u0433\u0438\\git\\\u043B\u0430\u0431\u044B\\\u0442\u0440\u0431\u0434\\lab3\\database\\database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|e:\\\u043F\u0440\u043E\u0433\u0438\\git\\\u043B\u0430\u0431\u044B\\\u0442\u0440\u0431\u0434\\lab3\\database\\database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,13 +42,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FMDI.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\FMDI.cs",
               "RelativeDocumentMoniker": "DataBase\\FMDI.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\FMDI.cs*",
               "RelativeToolTip": "DataBase\\FMDI.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCQAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T07:38:00.753Z",
               "EditorCaption": ""
@@ -59,8 +59,8 @@
               "Title": "InsEditSprav.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\InsEditSprav.cs",
               "RelativeDocumentMoniker": "DataBase\\InsEditSprav.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\InsEditSprav.cs*",
-              "RelativeToolTip": "DataBase\\InsEditSprav.cs*",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\InsEditSprav.cs",
+              "RelativeToolTip": "DataBase\\InsEditSprav.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAjwD0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T10:02:40.576Z",
@@ -72,8 +72,8 @@
               "Title": "InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\InsEditSprav.cs",
               "RelativeDocumentMoniker": "DataBase\\InsEditSprav.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
-              "RelativeToolTip": "DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T10:00:56.166Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
@@ -84,8 +84,8 @@
               "Title": "Table.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Table.cs",
               "RelativeDocumentMoniker": "DataBase\\Table.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Table.cs*",
-              "RelativeToolTip": "DataBase\\Table.cs*",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Table.cs",
+              "RelativeToolTip": "DataBase\\Table.cs",
               "ViewState": "AgIAAM0AAAAAAAAAAAArwNMAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T11:54:28.434Z",
@@ -97,15 +97,15 @@
               "Title": "Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Table.cs",
               "RelativeDocumentMoniker": "DataBase\\Table.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
-              "RelativeToolTip": "DataBase\\Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DataBase\\Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T11:45:41.603Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FMDI.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\FMDI.cs",
               "RelativeDocumentMoniker": "DataBase\\FMDI.cs",
