@@ -71,11 +71,11 @@
     <Compile Include="FMDI.Designer.cs">
       <DependentUpon>FMDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsEditCity.cs">
+    <Compile Include="InsEditSprav.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsEditCity.Designer.cs">
-      <DependentUpon>InsEditCity.cs</DependentUpon>
+    <Compile Include="InsEditSprav.Designer.cs">
+      <DependentUpon>InsEditSprav.cs</DependentUpon>
     </Compile>
     <Compile Include="Table.cs">
       <SubType>Form</SubType>
@@ -88,8 +88,8 @@
     <EmbeddedResource Include="FMDI.resx">
       <DependentUpon>FMDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsEditCity.resx">
-      <DependentUpon>InsEditCity.cs</DependentUpon>
+    <EmbeddedResource Include="InsEditSprav.resx">
+      <DependentUpon>InsEditSprav.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
