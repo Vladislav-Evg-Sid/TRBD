@@ -157,37 +157,42 @@
             // RT_Brand
             // 
             this.RT_Brand.Name = "RT_Brand";
-            this.RT_Brand.Size = new System.Drawing.Size(154, 22);
+            this.RT_Brand.Size = new System.Drawing.Size(180, 22);
             this.RT_Brand.Text = "Марка";
+            this.RT_Brand.Click += new System.EventHandler(this.LoadData_Brand);
             // 
             // RT_Model
             // 
             this.RT_Model.Name = "RT_Model";
-            this.RT_Model.Size = new System.Drawing.Size(154, 22);
+            this.RT_Model.Size = new System.Drawing.Size(180, 22);
             this.RT_Model.Text = "Модель";
+            this.RT_Model.Click += new System.EventHandler(this.LoadData_Model);
             // 
             // RT_FuelType
             // 
             this.RT_FuelType.Name = "RT_FuelType";
-            this.RT_FuelType.Size = new System.Drawing.Size(154, 22);
+            this.RT_FuelType.Size = new System.Drawing.Size(180, 22);
             this.RT_FuelType.Text = "Тип топлива";
+            this.RT_FuelType.Click += new System.EventHandler(this.LoadData_FuelType);
             // 
             // RT_Transm
             // 
             this.RT_Transm.Name = "RT_Transm";
-            this.RT_Transm.Size = new System.Drawing.Size(154, 22);
+            this.RT_Transm.Size = new System.Drawing.Size(180, 22);
             this.RT_Transm.Text = "Трансмиссия";
+            this.RT_Transm.Click += new System.EventHandler(this.LoadData_Transmission);
             // 
             // RT_RentStatus
             // 
             this.RT_RentStatus.Name = "RT_RentStatus";
-            this.RT_RentStatus.Size = new System.Drawing.Size(154, 22);
+            this.RT_RentStatus.Size = new System.Drawing.Size(180, 22);
             this.RT_RentStatus.Text = "Статус аренды";
+            this.RT_RentStatus.Click += new System.EventHandler(this.LoadData_RentStatus);
             // 
             // RT_City
             // 
             this.RT_City.Name = "RT_City";
-            this.RT_City.Size = new System.Drawing.Size(154, 22);
+            this.RT_City.Size = new System.Drawing.Size(180, 22);
             this.RT_City.Text = "Город";
             this.RT_City.Click += new System.EventHandler(this.LoadData_City);
             // 

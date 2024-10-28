@@ -27,18 +27,22 @@ namespace DataBase
             this.sc.ConnectionString = ConnectionString;
             TableName = TableNameInp;
             PoleName = PoleNameInp;
+            this.label1.Text = "Название " + name.Split(' ')[1];
         }
 
-        public InsEditSprav(string name, string ConnectionString, DataRow dr, string TableName, string PoleName)
+        public InsEditSprav(string name, string ConnectionString, DataRow dr, string TableNameInp, string PoleNameInp, string DopName)
         {
             InitializeComponent();
             this.Text = name;
             sc = new SQLiteConnection();
             this.sc.ConnectionString = ConnectionString;
+            TableName = TableNameInp;
+            PoleName = PoleNameInp;
+            this.label1.Text = "Название " + DopName;
             this.dr = dr;
             tmp = new DataSet();
 
-            textBox1.Text = dr[TableName].ToString();
+            textBox1.Text = dr[1].ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,6 +51,11 @@ namespace DataBase
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Count() == 0)
             {
@@ -58,13 +67,17 @@ namespace DataBase
 
                 if ((int)Tag == 0)
                 {
-                    command = new SQLiteCommand("INSERT INTO " + TableName + " (" + PoleName + ") VALUES('"
-                        + textBox1.Text + "')", sc);
+                    string cmd = "INSERT INTO " + TableName + " (" + PoleName + ") VALUES('"
+                        + textBox1.Text + "')";
+
+                    MessageBox.Show(cmd);
+                    command = new SQLiteCommand(cmd, sc);
                 }
                 else
                 {
                     command = new SQLiteCommand("UPDATE " + TableName + " SET " + PoleName + " = ? WHERE ID_" + PoleName + " = ?", sc);
-                    command.Parameters.AddWithValue("@City", textBox1.Text);
+                    command.Parameters.AddWithValue("@" + PoleName, textBox1.Text);
+                    command.Parameters.AddWithValue("@ID_" + PoleName, dr[0]);
                 }
 
                 command.ExecuteNonQuery();

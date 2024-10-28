@@ -32,6 +32,26 @@ namespace DataBase
             this.Close();
         }
 
+        private void LoadData_Brand(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
         private void LoadData_City(object sender, EventArgs e)
         {
             string str = (sender as ToolStripMenuItem).Text;
@@ -52,7 +72,89 @@ namespace DataBase
             }
         }
 
+        private void LoadData_FuelType(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void LoadData_Model(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void LoadData_RentStatus(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void LoadData_Transmission(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        { }
+        {
+        
+        }
     }
 }

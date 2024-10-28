@@ -30,15 +30,45 @@ namespace DataBase
             this.Text = nameF;
             this.Name = nameF;
             this.sc.ConnectionString = ConnectionString;
+            MessageBox.Show(this.Name);
             switch (this.Name)
             {
+                case "Марка":
+                    {
+                        query = "SELECT Brand.ID_Brand, Brand.Brand AS [Марка] FROM Brand";
+                        this.nameTable = "Brand";
+                        break;
+                    }
                 case "Город":
                     {
                         query = "SELECT City.ID_City, City.City AS [Город] FROM City";
                         this.nameTable = "City";
                         break;
                     }
-                    // Другие таблицы
+                case "Тип топлива":
+                    {
+                        query = "SELECT Fuel_Type.ID_Fuel, Fuel_Type.Fuel AS [Тип топлива] FROM Fuel_Type";
+                        this.nameTable = "Fuel_Type";
+                        break;
+                    }
+                case "Модель":
+                    {
+                        query = "SELECT Model.ID_Model, Model.Model AS [Модель] FROM Model";
+                        this.nameTable = "Model";
+                        break;
+                    }
+                case "Статус аренды":
+                    {
+                        query = "SELECT Rent_Status.ID_Status, Rent_Status.Status AS [Статус аренды] FROM Rent_Status";
+                        this.nameTable = "Rent_Status";
+                        break;
+                    }
+                case "Трансмиссия":
+                    {
+                        query = "SELECT Transmission.ID_Transmission, Transmission.Transmission AS [Трансмисся] FROM Transmission";
+                        this.nameTable = "Rent_Status";
+                        break;
+                    }
             }
             a = new SQLiteDataAdapter(query, sc);
             a.Fill(dt);
@@ -70,13 +100,68 @@ namespace DataBase
             }
             switch (Name)
             {
+                case "Марка":
+                    {
+                        InsEditSprav ed;
+                        if (param == 0) ed = new InsEditSprav("Добавление марки", this.sc.ConnectionString,
+                                                   "Brand", "Brand");
+                        else ed = new InsEditSprav("Изменение данных о марке", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index], "Brand", "Brand", "марки");
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
                 case "Город":
                     {
                         InsEditSprav ed;
                         if (param == 0) ed = new InsEditSprav("Добавление города", this.sc.ConnectionString,
                                                    "City", "City");
                         else ed = new InsEditSprav("Изменение данных о городе", this.sc.ConnectionString,
-                                                   dt.Rows[dataGridView1.CurrentRow.Index], "City", "City");
+                                                   dt.Rows[dataGridView1.CurrentRow.Index], "City", "City", "города");
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Тип топлива":
+                    {
+                        InsEditSprav ed;
+                        if (param == 0) ed = new InsEditSprav("Добавление топлива", this.sc.ConnectionString,
+                                                   "Fuel_Type", "Fuel");
+                        else ed = new InsEditSprav("Изменение данных о топливе ", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index], "Fuel_Type", "Fuel", "топлива");
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Модель":
+                    {
+                        InsEditSprav ed;
+                        if (param == 0) ed = new InsEditSprav("Добавление модели", this.sc.ConnectionString,
+                                                   "Model", "Model");
+                        else ed = new InsEditSprav("Изменение данных о модели ", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index], "Model", "Model", "модели");
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Статус аренды":
+                    {
+                        InsEditSprav ed;
+                        if (param == 0) ed = new InsEditSprav("Добавление статуса", this.sc.ConnectionString,
+                                                   "Rent_Status", "Status");
+                        else ed = new InsEditSprav("Изменение данных о статусе ", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index], "Rent_Status", "Status", "статуса");
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Трансмиссия":
+                    {
+                        InsEditSprav ed;
+                        if (param == 0) ed = new InsEditSprav("Добавление трансмиссии", this.sc.ConnectionString,
+                                                   "Transmission", "Transmission");
+                        else ed = new InsEditSprav("Изменение данных о трансмиссии ", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index], "Transmission", "Transmission", "трансмиссии");
                         ed.Tag = param;
                         ed.ShowDialog();
                         break;
@@ -125,7 +210,7 @@ namespace DataBase
             sc.Open();
             try
             {
-                command = new SQLiteCommand("DELETE * FROM [" + nameTable + "] WHERE ["
+                command = new SQLiteCommand("DELETE FROM [" + nameTable + "] WHERE ["
                                            + dt.Columns[0].ColumnName + "] = " +
                                            dt.Rows[dataGridView1.CurrentRow.Index][0], sc);
                 command.ExecuteNonQuery();
