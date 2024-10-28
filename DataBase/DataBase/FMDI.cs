@@ -32,6 +32,21 @@ namespace DataBase
             this.Close();
         }
 
+        private void CascadM_Clic(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void HorisontalM_Clic(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void VerticalM_Clic(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
+
         private void LoadData_Brand(object sender, EventArgs e)
         {
             string str = (sender as ToolStripMenuItem).Text;

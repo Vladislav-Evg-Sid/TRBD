@@ -30,7 +30,6 @@ namespace DataBase
             this.Text = nameF;
             this.Name = nameF;
             this.sc.ConnectionString = ConnectionString;
-            MessageBox.Show(this.Name);
             switch (this.Name)
             {
                 case "Марка":

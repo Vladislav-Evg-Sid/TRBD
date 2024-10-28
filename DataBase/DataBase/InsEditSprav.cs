@@ -67,11 +67,8 @@ namespace DataBase
 
                 if ((int)Tag == 0)
                 {
-                    string cmd = "INSERT INTO " + TableName + " (" + PoleName + ") VALUES('"
-                        + textBox1.Text + "')";
-
-                    MessageBox.Show(cmd);
-                    command = new SQLiteCommand(cmd, sc);
+                    command = new SQLiteCommand("INSERT INTO " + TableName + " (" + PoleName + ") VALUES('"
+                        + textBox1.Text + "')", sc);
                 }
                 else
                 {
