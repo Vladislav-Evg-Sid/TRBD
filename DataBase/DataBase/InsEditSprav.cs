@@ -59,7 +59,7 @@ namespace DataBase
         {
             if (textBox1.Text.Count() == 0)
             {
-                MessageBox.Show("Не все поля заполнены");
+                MessageBox.Show("Не все поля заполнены!");
             }
             else
             {
