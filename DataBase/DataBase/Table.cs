@@ -65,7 +65,81 @@ namespace DataBase
                 case "Трансмиссия":
                     {
                         query = "SELECT Transmission.ID_Transmission, Transmission.Transmission AS [Трансмисся] FROM Transmission";
-                        this.nameTable = "Rent_Status";
+                        this.nameTable = "Transmission";
+                        break;
+                    }
+                case "Парки":
+                    {
+                        query = "SELECT Park.ID_Park, Park.ID_City, Park.Street as [Улица], Park.House_Number as [Номер дома], Park.Start_Time as [Время начала работы], Park.End_Time as [Время окончания работы] FROM Park";
+                        this.nameTable = "Park";
+                        break;
+                    }
+                case "Сотрудники":
+                    {
+                        query = "SELECT Employee.ID_Employee, Employee.Employee_Surname as [Фамилия], Employee.Employee_Name as [Имя], Employee.Employee_Patronymic as [Отчество], Employee.Passport as [Серия и номер паспорта], Employee.INN as [ИНН], Employee.ID_Park FROM Employee";
+                        this.nameTable = "Employee";
+                        break;
+                    }
+                case "Автомобили":
+                    {
+                        query = "SELECT Auto.ID_Auto, Auto.ID_Brand, Auto.ID_Model, Auto.ID_Fuel, Auto.ID_Transmission, Auto.Rent_Price as [Цена аренды], Auto.Year as [Год производства], Auto.ID_Park, Auto.Fuel_Consumption as [Расход топлива] FROM Auto";
+                        this.nameTable = "Auto";
+                        break;
+                    }
+                case "Клиенты":
+                    {
+                        query = "SELECT Client.ID_Client, Client.Client_Surname as [Фамилия], Client.Client_Name as [Имя], Client.Client_Patronymic as [Отчество], Client.License as [Серия и номер ВУ], Client.Expirience as [Стаж], Client.Phone_Number as [Номер телефона], Client.Date_of_Birth as [Дата рождения] from Client";
+                        this.nameTable = "Client";
+                        break;
+                    }
+                case "Аренды":
+                    {
+                        query = "SELECT Rent.ID_Rent, Rent.ID_Employee, Rent.ID_Auto, Rent.Start_Date as [Дата начала аренды], Rent.End_Date as [Дата окончания аренды], Rent.Rent_Price as [Цена аренды за весь срок], Rent.Pledge as [Залог], Rent.ID_Status FROM Rent ";
+                        this.nameTable = "Rent";
+                        break;
+                    }
+                case "Список клиентов":
+                    {
+                        query = "SELECT C.ID_Client, C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя], C.Client_Surname AS [Отчество] FROM Client as C";
+                        this.nameTable = "Client_list";
+                        break;
+                    }
+                case "Работа парков":
+                    {
+                        query = "SELECT P.ID_Park, C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома], P.Start_Time AS [Начало работы], P.End_Time AS [Конец работы] FROM Park as P JOIN City as C ON P.ID_City = C.ID_City;";
+                        this.nameTable = "Park_Time";
+                        break;
+                    }
+                case "Списки автомобилей в парках":
+                    {
+                        query = "SELECT A.ID_Auto, B.Brand AS [Марка], M.Model AS [Модель], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер телефона] FROM Auto as A JOIN Brand as B ON A.ID_Brand = B.ID_Brand JOIN Model as M ON A.ID_Model = M.ID_Model JOIN City AS C ON P.ID_City = C.ID_City JOIN Park as P ON A.ID_Park = P.ID_Park"; 
+                        this.nameTable = "Park_Cars";
+                        break;
+                    }
+                case "Списки сотрудников в парках":
+                    {
+                        query = "SELECT E.ID_Employee, E.Employee_Surname AS [Фамилия], E.Employee_Name AS [Имя], E.Employee_Patronymic AS [Отчество], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома] FROM Employee as E JOIN Park as P ON P.ID_Park = E.ID_Park JOIN City as C ON P.ID_City = C.ID_City";
+                        this.nameTable = "Park_Employees";
+                        break;
+                    }
+                case "Автомобили по клиентам":
+                    {
+                        query = "SELECT  C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя],  C.Client_Patronymic AS [Отчество],  B.Brand AS [Марка], M.Model AS [Модель],  R.ID_Rent ,  R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды] FROM Client AS C JOIN Rent AS R  ON C.ID_Client = R.ID_Client JOIN Auto AS A  ON R.ID_Auto = A.ID_Auto JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M   ON A.ID_Model = M.ID_Model;";
+                        this.nameTable = "Client_Auto";
+                        break;
+                    }
+                case "Автомобили по сотрудникам":
+                    {
+                        query = "SELECT  E.Employee_Surname AS [Фамилия], E.Employee_Name AS [Имя], E.Employee_Patronymic AS [Отчество],  B.Brand AS [Марка],  M.Model AS [Модель], R.ID_Rent,  R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды] FROM Employee AS E JOIN Rent AS R  ON E.ID_Employee = R.ID_Employee JOIN Auto AS A  ON R.ID_Auto = A.ID_Auto JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model;";
+                        this.nameTable = "Employee_Auto";
+                        break;
+                    }
+                case "Аренда автомобиля":
+                    {
+                        query = "SELECT  A.ID_Auto,  B.Brand AS [Марка],  M.Model AS [Модель],  R.ID_Rent , R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды" +
+                            "" +
+                            "] FROM Auto AS A JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model JOIN Rent AS R  ON A.ID_Auto = R.ID_Auto;";
+                        this.nameTable = "Rent_Auto";
                         break;
                     }
             }

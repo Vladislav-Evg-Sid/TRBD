@@ -171,5 +171,261 @@ namespace DataBase
         {
         
         }
+
+        private void основныеТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void справочныеТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void отчётыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ParksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+            private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void автомобилиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void клиентыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void арендыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void спискиАвтомобилейВПаркахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void спискиСотрудниковВПаркахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void автомобилиПоКлиентамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void автомобилиПоСотрудникамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void арендаАвтомобиляToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void работаПаркаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+        private void списокКлиентовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string str = (sender as ToolStripMenuItem).Text;
+            bool flag = true;
+            foreach (var a in MdiChildren)
+            {
+                if (a.Text == str)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                Table t = new Table(str, ConnectionString);
+                t.MdiParent = this;
+                t.Show();
+            }
+        }
+
+
     }
 }

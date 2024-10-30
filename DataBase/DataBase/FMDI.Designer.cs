@@ -85,7 +85,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -100,36 +100,42 @@
             this.основныеТаблицыToolStripMenuItem.Name = "основныеТаблицыToolStripMenuItem";
             this.основныеТаблицыToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
             this.основныеТаблицыToolStripMenuItem.Text = "Основные таблицы";
+            this.основныеТаблицыToolStripMenuItem.Click += new System.EventHandler(this.основныеТаблицыToolStripMenuItem_Click);
             // 
             // паркиToolStripMenuItem
             // 
             this.паркиToolStripMenuItem.Name = "паркиToolStripMenuItem";
             this.паркиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.паркиToolStripMenuItem.Text = "Парки";
+            this.паркиToolStripMenuItem.Click += new System.EventHandler(this.ParksToolStripMenuItem_Click);
             // 
             // сотрудникиToolStripMenuItem
             // 
             this.сотрудникиToolStripMenuItem.Name = "сотрудникиToolStripMenuItem";
             this.сотрудникиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сотрудникиToolStripMenuItem.Text = "Сотрудники";
+            this.сотрудникиToolStripMenuItem.Click += new System.EventHandler(this.сотрудникиToolStripMenuItem_Click);
             // 
             // автомобилиToolStripMenuItem
             // 
             this.автомобилиToolStripMenuItem.Name = "автомобилиToolStripMenuItem";
             this.автомобилиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.автомобилиToolStripMenuItem.Text = "Автомобили";
+            this.автомобилиToolStripMenuItem.Click += new System.EventHandler(this.автомобилиToolStripMenuItem_Click);
             // 
             // клиентыToolStripMenuItem
             // 
             this.клиентыToolStripMenuItem.Name = "клиентыToolStripMenuItem";
             this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.клиентыToolStripMenuItem.Text = "Клиенты";
+            this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click);
             // 
             // арендыToolStripMenuItem
             // 
             this.арендыToolStripMenuItem.Name = "арендыToolStripMenuItem";
             this.арендыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.арендыToolStripMenuItem.Text = "Аренды";
+            this.арендыToolStripMenuItem.Click += new System.EventHandler(this.арендыToolStripMenuItem_Click);
             // 
             // справочныеТаблицыToolStripMenuItem
             // 
@@ -143,46 +149,47 @@
             this.справочныеТаблицыToolStripMenuItem.Name = "справочныеТаблицыToolStripMenuItem";
             this.справочныеТаблицыToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
             this.справочныеТаблицыToolStripMenuItem.Text = "Справочные таблицы";
+            this.справочныеТаблицыToolStripMenuItem.Click += new System.EventHandler(this.справочныеТаблицыToolStripMenuItem_Click);
             // 
             // маркаToolStripMenuItem
             // 
             this.маркаToolStripMenuItem.Name = "маркаToolStripMenuItem";
-            this.маркаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.маркаToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.маркаToolStripMenuItem.Text = "Марка";
             this.маркаToolStripMenuItem.Click += new System.EventHandler(this.LoadData_Brand);
             // 
             // модельToolStripMenuItem
             // 
             this.модельToolStripMenuItem.Name = "модельToolStripMenuItem";
-            this.модельToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.модельToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.модельToolStripMenuItem.Text = "Модель";
             this.модельToolStripMenuItem.Click += new System.EventHandler(this.LoadData_Model);
             // 
             // типТопливаToolStripMenuItem
             // 
             this.типТопливаToolStripMenuItem.Name = "типТопливаToolStripMenuItem";
-            this.типТопливаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.типТопливаToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.типТопливаToolStripMenuItem.Text = "Тип топлива";
             this.типТопливаToolStripMenuItem.Click += new System.EventHandler(this.LoadData_FuelType);
             // 
             // трансмиссияToolStripMenuItem
             // 
             this.трансмиссияToolStripMenuItem.Name = "трансмиссияToolStripMenuItem";
-            this.трансмиссияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.трансмиссияToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.трансмиссияToolStripMenuItem.Text = "Трансмиссия";
             this.трансмиссияToolStripMenuItem.Click += new System.EventHandler(this.LoadData_Transmission);
             // 
             // статусАрендыToolStripMenuItem
             // 
             this.статусАрендыToolStripMenuItem.Name = "статусАрендыToolStripMenuItem";
-            this.статусАрендыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.статусАрендыToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.статусАрендыToolStripMenuItem.Text = "Статус аренды";
             this.статусАрендыToolStripMenuItem.Click += new System.EventHandler(this.LoadData_RentStatus);
             // 
             // городToolStripMenuItem
             // 
             this.городToolStripMenuItem.Name = "городToolStripMenuItem";
-            this.городToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.городToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.городToolStripMenuItem.Text = "Город";
             this.городToolStripMenuItem.Click += new System.EventHandler(this.LoadData_City);
             // 
@@ -199,48 +206,56 @@
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
+            this.отчётыToolStripMenuItem.Click += new System.EventHandler(this.отчётыToolStripMenuItem_Click);
             // 
             // списокКлиентовToolStripMenuItem
             // 
             this.списокКлиентовToolStripMenuItem.Name = "списокКлиентовToolStripMenuItem";
             this.списокКлиентовToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.списокКлиентовToolStripMenuItem.Text = "Список клиентов";
+            this.списокКлиентовToolStripMenuItem.Click += new System.EventHandler(this.списокКлиентовToolStripMenuItem_Click);
             // 
             // работаПаркаToolStripMenuItem
             // 
             this.работаПаркаToolStripMenuItem.Name = "работаПаркаToolStripMenuItem";
             this.работаПаркаToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.работаПаркаToolStripMenuItem.Text = "Работа парков";
+            this.работаПаркаToolStripMenuItem.Click += new System.EventHandler(this.работаПаркаToolStripMenuItem_Click);
             // 
             // спискиАвтомобилейВПаркахToolStripMenuItem
             // 
             this.спискиАвтомобилейВПаркахToolStripMenuItem.Name = "спискиАвтомобилейВПаркахToolStripMenuItem";
             this.спискиАвтомобилейВПаркахToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.спискиАвтомобилейВПаркахToolStripMenuItem.Text = "Списки автомобилей в парках";
+            this.спискиАвтомобилейВПаркахToolStripMenuItem.Click += new System.EventHandler(this.спискиАвтомобилейВПаркахToolStripMenuItem_Click);
             // 
             // спискиСотрудниковВПаркахToolStripMenuItem
             // 
             this.спискиСотрудниковВПаркахToolStripMenuItem.Name = "спискиСотрудниковВПаркахToolStripMenuItem";
             this.спискиСотрудниковВПаркахToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.спискиСотрудниковВПаркахToolStripMenuItem.Text = "Списки сотрудников в парках";
+            this.спискиСотрудниковВПаркахToolStripMenuItem.Click += new System.EventHandler(this.спискиСотрудниковВПаркахToolStripMenuItem_Click);
             // 
             // автомобилиПоКлиентамToolStripMenuItem
             // 
             this.автомобилиПоКлиентамToolStripMenuItem.Name = "автомобилиПоКлиентамToolStripMenuItem";
             this.автомобилиПоКлиентамToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.автомобилиПоКлиентамToolStripMenuItem.Text = "Автомобили по клиентам";
+            this.автомобилиПоКлиентамToolStripMenuItem.Click += new System.EventHandler(this.автомобилиПоКлиентамToolStripMenuItem_Click);
             // 
             // автомобилиПоСотрудникамToolStripMenuItem
             // 
             this.автомобилиПоСотрудникамToolStripMenuItem.Name = "автомобилиПоСотрудникамToolStripMenuItem";
             this.автомобилиПоСотрудникамToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.автомобилиПоСотрудникамToolStripMenuItem.Text = "Автомобили по сотрудникам";
+            this.автомобилиПоСотрудникамToolStripMenuItem.Click += new System.EventHandler(this.автомобилиПоСотрудникамToolStripMenuItem_Click);
             // 
             // арендаАвтомобиляToolStripMenuItem
             // 
             this.арендаАвтомобиляToolStripMenuItem.Name = "арендаАвтомобиляToolStripMenuItem";
             this.арендаАвтомобиляToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.арендаАвтомобиляToolStripMenuItem.Text = "Аренда автомобиля";
+            this.арендаАвтомобиляToolStripMenuItem.Click += new System.EventHandler(this.арендаАвтомобиляToolStripMenuItem_Click);
             // 
             // окноToolStripMenuItem
             // 
@@ -255,21 +270,21 @@
             // каскадToolStripMenuItem
             // 
             this.каскадToolStripMenuItem.Name = "каскадToolStripMenuItem";
-            this.каскадToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.каскадToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.каскадToolStripMenuItem.Text = "Каскад";
             this.каскадToolStripMenuItem.Click += new System.EventHandler(this.CascadM_Clic);
             // 
             // горизонтальноToolStripMenuItem
             // 
             this.горизонтальноToolStripMenuItem.Name = "горизонтальноToolStripMenuItem";
-            this.горизонтальноToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.горизонтальноToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.горизонтальноToolStripMenuItem.Text = "Горизонтально";
             this.горизонтальноToolStripMenuItem.Click += new System.EventHandler(this.HorisontalM_Clic);
             // 
             // вертикальноToolStripMenuItem
             // 
             this.вертикальноToolStripMenuItem.Name = "вертикальноToolStripMenuItem";
-            this.вертикальноToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вертикальноToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.вертикальноToolStripMenuItem.Text = "Вертикально";
             this.вертикальноToolStripMenuItem.Click += new System.EventHandler(this.VerticalM_Clic);
             // 
