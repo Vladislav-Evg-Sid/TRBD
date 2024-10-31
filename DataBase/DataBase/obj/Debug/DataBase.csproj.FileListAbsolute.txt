@@ -16,7 +16,6 @@ E:\Проги\git\Лабы\ТРБД\Lab3\TRBD\DataBase\DataBase\obj\Debug\DataBa
 E:\Проги\git\Лабы\ТРБД\Lab3\TRBD\DataBase\DataBase\obj\Debug\DataBase.csproj.Up2Date
 E:\Проги\git\Лабы\ТРБД\Lab3\TRBD\DataBase\DataBase\obj\Debug\DataBase.exe
 E:\Проги\git\Лабы\ТРБД\Lab3\TRBD\DataBase\DataBase\obj\Debug\DataBase.pdb
-E:\Проги\git\Лабы\ТРБД\Lab3\TRBD\DataBase\DataBase\obj\Debug\DataBase.Form1.resources
 E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\bin\Debug\DataBase.exe.config
 E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\bin\Debug\DataBase.exe
 E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\bin\Debug\DataBase.pdb
@@ -59,3 +58,6 @@ C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cac
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.csproj.Up2Date
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.exe
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.pdb
+E:\Проги\git\Лабы\ТРБД\lab3\TRBD\DataBase\DataBase\obj\Debug\DataBase.FMDI.resources
+E:\Проги\git\Лабы\ТРБД\lab3\TRBD\DataBase\DataBase\obj\Debug\DataBase.InsEditSprav.resources
+E:\Проги\git\Лабы\ТРБД\lab3\TRBD\DataBase\DataBase\obj\Debug\DataBase.Table.resources
