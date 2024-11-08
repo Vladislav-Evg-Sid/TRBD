@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Git\\BD\\TRBD\\DataBase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD\\TRBD\\DataBase\\database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD\\TRBD\\DataBase\\database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditpark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditpark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD\\TRBD\\DataBase\\database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD\\TRBD\\DataBase\\database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD\\TRBD\\DataBase\\database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\fmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd\\trbd\\database\\database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,79 +46,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InsEditSprav.cs",
-              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\InsEditSprav.cs",
-              "RelativeDocumentMoniker": "DataBase\\InsEditSprav.cs",
-              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\InsEditSprav.cs",
-              "RelativeToolTip": "DataBase\\InsEditSprav.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwD0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T10:02:40.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "FMDI.cs",
-              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\FMDI.cs",
-              "RelativeDocumentMoniker": "DataBase\\FMDI.cs",
-              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\FMDI.cs",
-              "RelativeToolTip": "DataBase\\FMDI.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwBcAAAAJAAAAAAAAAA==",
+              "Title": "insEditPark.cs",
+              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditPark.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditPark.cs",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditPark.cs",
+              "RelativeToolTip": "DataBase\\insEditPark.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T07:38:00.753Z",
+              "WhenOpened": "2024-11-08T07:33:47.825Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\InsEditSprav.cs",
-              "RelativeDocumentMoniker": "DataBase\\InsEditSprav.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\\u0422\u0420\u0411\u0414\\lab3\\DataBase\\DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "insEditRent.cs",
+              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditRent.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditRent.cs",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditRent.cs",
+              "RelativeToolTip": "DataBase\\insEditRent.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwv3EAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T10:00:56.166Z"
+              "WhenOpened": "2024-11-08T14:58:10.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "insEditRent.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditRent.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditRent.cs",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditRent.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DataBase\\insEditRent.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:55:51.274Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "insEditAuto.cs",
+              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditAuto.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditAuto.cs",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditAuto.cs",
+              "RelativeToolTip": "DataBase\\insEditAuto.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAwwIsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T13:57:52.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditAuto.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditAuto.cs",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DataBase\\insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T13:50:21.616Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "insEditClient.cs",
+              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditClient.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditClient.cs",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditClient.cs",
+              "RelativeToolTip": "DataBase\\insEditClient.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAvwF4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T13:04:37.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "insEditEmployee.cs",
+              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditEmployee.cs",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs",
+              "RelativeToolTip": "DataBase\\insEditEmployee.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAuwF0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T10:08:12.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Table.cs",
               "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\Table.cs",
               "RelativeDocumentMoniker": "DataBase\\Table.cs",
               "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\Table.cs",
               "RelativeToolTip": "DataBase\\Table.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAwwGgAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAA8BAAAAAAAAAAArwCUBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T11:54:28.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Table.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\Table.cs",
               "RelativeDocumentMoniker": "DataBase\\Table.cs",
-              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\Table.cs [Design]",
-              "RelativeToolTip": "DataBase\\Table.cs [Design]",
+              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DataBase\\Table.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T11:45:41.603Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FMDI.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\FMDI.cs",
-              "RelativeDocumentMoniker": "DataBase\\FMDI.cs",
-              "ToolTip": "C:\\Git\\BD\\TRBD\\DataBase\\DataBase\\FMDI.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "DataBase\\FMDI.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T07:33:05.149Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]

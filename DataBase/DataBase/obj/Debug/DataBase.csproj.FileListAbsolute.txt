@@ -59,3 +59,8 @@ C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cac
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.csproj.Up2Date
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.exe
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.pdb
+C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditPark.resources
+C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditEmployee.resources
+C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditClient.resources
+C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditAuto.resources
+C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditRent.resources

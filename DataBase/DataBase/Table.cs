@@ -76,7 +76,7 @@ namespace DataBase
                     }
                 case "Сотрудники":
                     {
-                        query = "SELECT Employee.ID_Employee, Employee.Employee_Surname as [Фамилия], Employee.Employee_Name as [Имя], Employee.Employee_Patronymic as [Отчество], Employee.Passport as [Серия и номер паспорта], Employee.INN as [ИНН], Employee.ID_Park FROM Employee";
+                        query = "SELECT Employee.ID_Employee, Employee.Employee_Surname as [Фамилия], Employee.Employee_Name as [Имя], Employee.Employee_Patronymic as [Отчество], Employee.Passport as [Паспорт], Employee.INN as [ИНН], Employee.ID_Park FROM Employee";
                         this.nameTable = "Employee";
                         break;
                     }
@@ -88,13 +88,13 @@ namespace DataBase
                     }
                 case "Клиенты":
                     {
-                        query = "SELECT Client.ID_Client, Client.Client_Surname as [Фамилия], Client.Client_Name as [Имя], Client.Client_Patronymic as [Отчество], Client.License as [Серия и номер ВУ], Client.Expirience as [Стаж], Client.Phone_Number as [Номер телефона], Client.Date_of_Birth as [Дата рождения] from Client";
+                        query = "SELECT Client.ID_Client, Client.Client_Surname as [Фамилия], Client.Client_Name as [Имя], Client.Client_Patronymic as [Отчество], Client.License as [ВУ], Client.Expirience as [Стаж], Client.Phone_Number as [Номер телефона], Client.Date_of_Birth as [Дата рождения] from Client";
                         this.nameTable = "Client";
                         break;
                     }
                 case "Аренды":
                     {
-                        query = "SELECT Rent.ID_Rent, Rent.ID_Employee, Rent.ID_Auto, Rent.Start_Date as [Дата начала аренды], Rent.End_Date as [Дата окончания аренды], Rent.Rent_Price as [Цена аренды за весь срок], Rent.Pledge as [Залог], Rent.ID_Status FROM Rent ";
+                        query = "SELECT Rent.ID_Rent, Rent.ID_Employee, Rent.ID_Client, Rent.ID_Auto, Rent.Start_Date as [Дата начала аренды], Rent.End_Date as [Дата окончания аренды], Rent.Rent_Price as [Стоимость аренды], Rent.Pledge as [Залог], Rent.ID_Status FROM Rent ";
                         this.nameTable = "Rent";
                         break;
                     }
@@ -235,6 +235,61 @@ namespace DataBase
                                                    "Transmission", "Transmission");
                         else ed = new InsEditSprav("Изменение данных о трансмиссии ", this.sc.ConnectionString,
                                                    dt.Rows[dataGridView1.CurrentRow.Index], "Transmission", "Transmission", "трансмиссии");
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Парки":
+                    {
+                        insEditPark ed;
+                        if (param == 0) ed = new insEditPark("Название города", this.sc.ConnectionString);
+                    
+                        else ed = new insEditPark("Изменение данных об улице ", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index]);
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Сотрудники":
+                    {
+                        insEditEmployee ed;
+                        if (param == 0) ed = new insEditEmployee("Сотрудники", this.sc.ConnectionString);
+
+                        else ed = new insEditEmployee("", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index]);
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Клиенты":
+                    {
+                        insEditClient ed;
+                        if (param == 0) ed = new insEditClient("Клиенты", this.sc.ConnectionString);
+
+                        else ed = new insEditClient("", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index]);
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Автомобили":
+                    {
+                        insEditAuto ed;
+                        if (param == 0) ed = new insEditAuto("Автомобили", this.sc.ConnectionString);
+
+                        else ed = new insEditAuto("", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index]);
+                        ed.Tag = param;
+                        ed.ShowDialog();
+                        break;
+                    }
+                case "Аренды":
+                    {
+                        insEditRent ed;
+                        if (param == 0) ed = new insEditRent("Аренды", this.sc.ConnectionString);
+
+                        else ed = new insEditRent("", this.sc.ConnectionString,
+                                                   dt.Rows[dataGridView1.CurrentRow.Index]);
                         ed.Tag = param;
                         ed.ShowDialog();
                         break;

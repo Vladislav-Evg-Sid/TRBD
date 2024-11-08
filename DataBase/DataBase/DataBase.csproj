@@ -71,6 +71,36 @@
     <Compile Include="FMDI.Designer.cs">
       <DependentUpon>FMDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="insEditRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insEditRent.Designer.cs">
+      <DependentUpon>insEditRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insEditAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insEditAuto.Designer.cs">
+      <DependentUpon>insEditAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insEditClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insEditClient.Designer.cs">
+      <DependentUpon>insEditClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insEditEmployee.Designer.cs">
+      <DependentUpon>insEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insEditPark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insEditPark.Designer.cs">
+      <DependentUpon>insEditPark.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsEditSprav.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +117,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FMDI.resx">
       <DependentUpon>FMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insEditRent.resx">
+      <DependentUpon>insEditRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insEditAuto.resx">
+      <DependentUpon>insEditAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insEditClient.resx">
+      <DependentUpon>insEditClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insEditEmployee.resx">
+      <DependentUpon>insEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insEditPark.resx">
+      <DependentUpon>insEditPark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsEditSprav.resx">
       <DependentUpon>InsEditSprav.cs</DependentUpon>
