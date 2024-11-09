@@ -100,45 +100,44 @@ namespace DataBase
                     }
                 case "Список клиентов":
                     {
-                        query = "SELECT C.ID_Client, C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя], C.Client_Surname AS [Отчество] FROM Client as C";
+                        query = "SELECT C.ID_Client AS [Номер клиента], C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя], C.Client_Surname AS [Отчество] FROM Client as C";
                         this.nameTable = "Client_list";
                         break;
                     }
                 case "Работа парков":
                     {
-                        query = "SELECT P.ID_Park, C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома], P.Start_Time AS [Начало работы], P.End_Time AS [Конец работы] FROM Park as P JOIN City as C ON P.ID_City = C.ID_City;";
+                        query = "SELECT P.ID_Park AS [Номер парка], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома], P.Start_Time AS [Начало работы], P.End_Time AS [Конец работы] FROM Park as P JOIN City as C ON P.ID_City = C.ID_City;";
                         this.nameTable = "Park_Time";
                         break;
                     }
                 case "Списки автомобилей в парках":
                     {
-                        query = "SELECT A.ID_Auto, B.Brand AS [Марка], M.Model AS [Модель], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер телефона] FROM Auto as A JOIN Brand as B ON A.ID_Brand = B.ID_Brand JOIN Model as M ON A.ID_Model = M.ID_Model JOIN City AS C ON P.ID_City = C.ID_City JOIN Park as P ON A.ID_Park = P.ID_Park"; 
+                        query = "SELECT P.ID_Park AS [номер парка], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома/км], A.ID_Auto AS [Номер автомобиля], B.Brand AS [Марка], M.Model AS [Модель] FROM Park as P JOIN City AS C ON P.ID_City = C.ID_City JOIN Auto as A ON P.ID_Park = A.ID_Park JOIN Brand as B ON A.ID_Brand = B.ID_Brand JOIN Model as M ON A.ID_Model = M.ID_Model";
                         this.nameTable = "Park_Cars";
                         break;
                     }
                 case "Списки сотрудников в парках":
                     {
-                        query = "SELECT E.ID_Employee, E.Employee_Surname AS [Фамилия], E.Employee_Name AS [Имя], E.Employee_Patronymic AS [Отчество], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома] FROM Employee as E JOIN Park as P ON P.ID_Park = E.ID_Park JOIN City as C ON P.ID_City = C.ID_City";
+                        query = "SELECT P.ID_Park AS [номер парка], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома/км], E.ID_Employee AS [Номер сотрудника], E.Employee_Surname AS [Фамилия], E.Employee_Name AS [Имя], E.Employee_Patronymic AS [Отчество] FROM Park as P JOIN City as C ON P.ID_City = C.ID_City JOIN Employee as E ON P.ID_Park = E.ID_Park";
                         this.nameTable = "Park_Employees";
                         break;
                     }
                 case "Автомобили по клиентам":
                     {
-                        query = "SELECT  C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя],  C.Client_Patronymic AS [Отчество],  B.Brand AS [Марка], M.Model AS [Модель],  R.ID_Rent ,  R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды] FROM Client AS C JOIN Rent AS R  ON C.ID_Client = R.ID_Client JOIN Auto AS A  ON R.ID_Auto = A.ID_Auto JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M   ON A.ID_Model = M.ID_Model;";
+                        query = "SELECT C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя], C.Client_Patronymic AS [Отчество], B.Brand AS [Марка], M.Model AS [Модель], R.ID_Rent AS [Номер аренды],  R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды] FROM Client AS C JOIN Rent AS R ON C.ID_Client = R.ID_Client JOIN Auto AS A ON R.ID_Auto = A.ID_Auto JOIN Brand AS B ON A.ID_Brand = B.ID_Brand JOIN Model AS M ON A.ID_Model = M.ID_Model;";
                         this.nameTable = "Client_Auto";
                         break;
                     }
                 case "Автомобили по сотрудникам":
                     {
-                        query = "SELECT  E.Employee_Surname AS [Фамилия], E.Employee_Name AS [Имя], E.Employee_Patronymic AS [Отчество],  B.Brand AS [Марка],  M.Model AS [Модель], R.ID_Rent,  R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды] FROM Employee AS E JOIN Rent AS R  ON E.ID_Employee = R.ID_Employee JOIN Auto AS A  ON R.ID_Auto = A.ID_Auto JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model;";
+                        query = "SELECT E.Employee_Surname AS [Фамилия], E.Employee_Name AS [Имя], E.Employee_Patronymic AS [Отчество], B.Brand AS [Марка], M.Model AS [Модель], R.ID_Rent AS [Номер аренды],  R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды] FROM Employee AS E JOIN Rent AS R  ON E.ID_Employee = R.ID_Employee JOIN Auto AS A  ON R.ID_Auto = A.ID_Auto JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model;";
                         this.nameTable = "Employee_Auto";
                         break;
                     }
                 case "Аренда автомобиля":
                     {
-                        query = "SELECT  A.ID_Auto,  B.Brand AS [Марка],  M.Model AS [Модель],  R.ID_Rent , R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды" +
-                            "" +
-                            "] FROM Auto AS A JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model JOIN Rent AS R  ON A.ID_Auto = R.ID_Auto;";
+                        query = "SELECT  A.ID_Auto AS [Номер автомобиля],  B.Brand AS [Марка],  M.Model AS [Модель],  R.ID_Rent AS [Номер аренды], R.Start_Date AS [Дата начала аренды],  R.End_Date AS [Дата окончания аренды]" +
+                            "FROM Auto AS A JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model JOIN Rent AS R  ON A.ID_Auto = R.ID_Auto;";
                         this.nameTable = "Rent_Auto";
                         break;
                     }
@@ -152,9 +151,53 @@ namespace DataBase
         {
             switch (this.Name)
             {
-                case "Город":
+                case "Список клиентов":
                     {
-                        // Определяем скрытые поля
+                        this.InsTable.Available = false;
+                        this.EditTable.Available = false;
+                        this.DelTable.Available = false;
+                        break;
+                    }
+                case "Работа парков":
+                    {
+                        this.InsTable.Available = false;
+                        this.EditTable.Available = false;
+                        this.DelTable.Available = false;
+                        break;
+                    }
+                case "Списки автомобилей в парках":
+                    {
+                        this.InsTable.Available = false;
+                        this.EditTable.Available = false;
+                        this.DelTable.Available = false;
+                        break;
+                    }
+                case "Списки сотрудников в парках":
+                    {
+                        this.InsTable.Available = false;
+                        this.EditTable.Available = false;
+                        this.DelTable.Available = false;
+                        break;
+                    }
+                case "Автомобили по клиентам":
+                    {
+                        this.InsTable.Available = false;
+                        this.EditTable.Available = false;
+                        this.DelTable.Available = false;
+                        break;
+                    }
+                case "Автомобили по сотрудникам":
+                    {
+                        this.InsTable.Available = false;
+                        this.EditTable.Available = false;
+                        this.DelTable.Available = false;
+                        break;
+                    }
+                case "Аренда автомобиля":
+                    {
+                        this.InsTable.Available = false;
+                        this.EditTable.Available = false;
+                        this.DelTable.Available = false;
                         break;
                     }
             }
