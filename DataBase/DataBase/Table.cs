@@ -250,6 +250,7 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
+                
                 case "Сотрудники":
                     {
                         insEditEmployee ed;
@@ -261,6 +262,7 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
+                
                 case "Клиенты":
                     {
                         insEditClient ed;
@@ -272,6 +274,7 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
+                
                 case "Автомобили":
                     {
                         insEditAuto ed;
@@ -283,6 +286,7 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
+                
                 case "Аренды":
                     {
                         insEditRent ed;
@@ -294,6 +298,7 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
+                
             }
             dt.Clear();
             a = new SQLiteDataAdapter(query, sc);

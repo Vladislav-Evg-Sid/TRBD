@@ -74,7 +74,7 @@
     <Compile Include="insEditRent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="insEditRent.Designer.cs">
+    <Compile Include="Form1.Designer.cs">
       <DependentUpon>insEditRent.cs</DependentUpon>
     </Compile>
     <Compile Include="insEditAuto.cs">
@@ -118,7 +118,7 @@
     <EmbeddedResource Include="FMDI.resx">
       <DependentUpon>FMDI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="insEditRent.resx">
+    <EmbeddedResource Include="Form1.resx">
       <DependentUpon>insEditRent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insEditAuto.resx">
