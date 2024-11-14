@@ -64,3 +64,8 @@ C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditEmployee.resources
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditClient.resources
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditAuto.resources
 C:\Git\BD\TRBD\DataBase\DataBase\obj\Debug\DataBase.insEditRent.resources
+E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.insEditRent.resources
+E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.insEditAuto.resources
+E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.insEditClient.resources
+E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.insEditEmployee.resources
+E:\Проги\git\Лабы\ТРБД\lab3\DataBase\DataBase\obj\Debug\DataBase.insEditPark.resources
