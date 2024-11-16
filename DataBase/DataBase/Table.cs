@@ -21,6 +21,7 @@ namespace DataBase
         private DataTable dt = new DataTable();
 
         private string nameTable;
+        private string nameID;
         private string query;
 
         private int CurrentIndex = 0;
@@ -39,71 +40,82 @@ namespace DataBase
                     {
                         query = "SELECT Brand.ID_Brand AS [ID], Brand.Brand AS [Марка] FROM Brand";
                         this.nameTable = "Brand";
+                        this.nameID = "ID_Brand";
                         break;
                     }
                 case "Город":
                     {
                         query = "SELECT City.ID_City AS [ID], City.City AS [Город] FROM City";
                         this.nameTable = "City";
+                        this.nameID = "ID_City";
                         break;
                     }
                 case "Тип топлива":
                     {
                         query = "SELECT Fuel_Type.ID_Fuel AS [ID], Fuel_Type.Fuel AS [Тип топлива] FROM Fuel_Type";
                         this.nameTable = "Fuel_Type";
+                        this.nameID = "ID_Fuel";
                         break;
                     }
                 case "Модель":
                     {
                         query = "SELECT Model.ID_Model AS [ID], Model.Model AS [Модель] FROM Model";
                         this.nameTable = "Model";
+                        this.nameID = "ID_Model";
                         break;
                     }
                 case "Статус аренды":
                     {
                         query = "SELECT Rent_Status.ID_Status AS [ID], Rent_Status.Status AS [Статус аренды] FROM Rent_Status";
                         this.nameTable = "Rent_Status";
+                        this.nameID = "ID_Status";
                         break;
                     }
                 case "Трансмиссия":
                     {
                         query = "SELECT Transmission.ID_Transmission AS [ID], Transmission.Transmission AS [Трансмисся] FROM Transmission";
                         this.nameTable = "Transmission";
+                        this.nameID = "ID_Transmission";
                         break;
                     }
                 case "Парки":
                     {
                         query = "SELECT Park.ID_Park AS [ID], Park.ID_City, City.City AS [Город], Park.Street as [Улица], Park.House_Number as [Номер дома], Park.Start_Time as [Время начала работы], Park.End_Time as [Время окончания работы] FROM Park JOIN City ON Park.ID_City = City.ID_City";
                         this.nameTable = "Park";
+                        this.nameID = "ID_Park";
                         break;
                     }
                 case "Сотрудники":
                     {
                         query = "SELECT Employee.ID_Employee AS [ID], Park.ID_Park, Employee.Employee_Surname as [Фамилия], Employee.Employee_Name as [Имя], Employee.Employee_Patronymic as [Отчество], Employee.Passport as [Паспорт], Employee.INN as [ИНН], City.City AS [Город парка], Park.Street AS [Улица парка] FROM Employee JOIN Park ON Employee.ID_Park = Park.ID_Park JOIN City ON Park.ID_City = City.ID_city";
                         this.nameTable = "Employee";
+                        this.nameID = "ID_Employee";
                         break;
                     }
                 case "Автомобили":
                     {
                         query = "SELECT Auto.ID_Auto AS [ID], Brand.ID_Brand, Model.ID_Model, Fuel_Type.ID_Fuel, Transmission.ID_Transmission, Park.ID_Park, Brand.Brand AS [Марка], Model.Model AS [Модель], Fuel_Type.Fuel AS [Топливо], Transmission.Transmission AS [Трансмиссия], Auto.Rent_Price as [Цена аренды], Auto.Year as [Год производства], City.City AS [Город парка], Park.Street AS [Улица], Park.House_Number AS [Номер дома], Auto.Fuel_Consumption as [Расход топлива] FROM Auto JOIN Park ON Auto.ID_Park = Park.ID_Park JOIN City ON City.ID_City = Park.ID_City JOIN Brand ON Auto.ID_Brand = Brand.ID_Brand JOIN Model ON Auto.ID_Model = Model.ID_Model JOIN Transmission ON Auto.ID_Transmission = Transmission.ID_Transmission JOIN Fuel_Type ON Auto.ID_Fuel = Fuel_Type.ID_Fuel";
                         this.nameTable = "Auto";
+                        this.nameID = "ID_Auto";
                         break;
                     }
                 case "Клиенты":
                     {
                         query = "SELECT Client.ID_Client AS [ID], Client.Client_Surname as [Фамилия], Client.Client_Name as [Имя], Client.Client_Patronymic as [Отчество], Client.License as [ВУ], Client.Expirience as [Стаж], Client.Phone_Number as [Номер телефона], Client.Date_of_Birth as [Дата рождения] from Client";
                         this.nameTable = "Client";
+                        this.nameID = "ID_Client";
                         break;
                     }
                 case "Аренды":
                     {
                         query = "SELECT Rent.ID_Rent AS [ID], Employee.ID_Employee, Client.ID_Client, Auto.ID_Auto, Rent_Status.ID_Status, Rent.ID_Employee AS [Номер сутрудника], Employee.Employee_Surname AS [Фамилия сотрудника], Rent.ID_Client AS [Номер клиента], Client.Client_Surname AS [Фамилия клиента], Brand.Brand AS [Марка], Model.Model AS [Модель], Rent.Start_Date as [Дата начала аренды], Rent.End_Date as [Дата окончания аренды], Rent.Rent_Price as [Стоимость аренды], Rent.Pledge as [Залог], Rent_Status.Status AS [Статус аренды] FROM Rent JOIN Rent_Status ON Rent.ID_Status = Rent_Status.ID_Status JOIN Employee ON Rent.ID_Employee = Employee.ID_Employee JOIN Client ON Rent.ID_Client = Client.ID_Client JOIN Auto ON Rent.ID_Auto = Auto.ID_Auto JOIN Brand ON Auto.ID_Brand = Brand.ID_Brand JOIN Model ON Auto.ID_Model = Model.ID_Model";
                         this.nameTable = "Rent";
+                        this.nameID = "ID_Rent";
                         break;
                     }
                 case "Список клиентов":
                     {
-                        query = "SELECT C.ID_Client AS [Номер клиента], C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя], C.Client_Surname AS [Отчество] FROM Client as C";
+                        query = "SELECT C.ID_Client AS [Номер клиента], C.Client_Surname AS [Фамилия], C.Client_Name AS [Имя], C.Client_Patronymic AS [Отчество] FROM Client as C";
                         this.nameTable = "Client_list";
                         IsReportTable = true;
                         break;
@@ -117,7 +129,7 @@ namespace DataBase
                     }
                 case "Списки автомобилей в парках":
                     {
-                        query = "SELECTP.ID_Park AS [номер парка], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома/км], A.ID_Auto AS [Номер автомобиля], B.Brand AS [Марка], M.Model AS [Модель] FROM Park as P JOIN City AS C ON P.ID_City = C.ID_City JOIN Auto as A ON P.ID_Park = A.ID_Park JOIN Brand as B ON A.ID_Brand = B.ID_Brand JOIN Model as M ON A.ID_Model = M.ID_Model";
+                        query = "SELECT P.ID_Park AS [номер парка], C.City AS [Город], P.Street AS [Улица], P.House_Number AS [Номер дома/км], A.ID_Auto AS [Номер автомобиля], B.Brand AS [Марка], M.Model AS [Модель] FROM Park as P JOIN City AS C ON P.ID_City = C.ID_City JOIN Auto as A ON P.ID_Park = A.ID_Park JOIN Brand as B ON A.ID_Brand = B.ID_Brand JOIN Model as M ON A.ID_Model = M.ID_Model";
                         this.nameTable = "Park_Cars";
                         IsReportTable = true;
                         break;
@@ -161,6 +173,8 @@ namespace DataBase
         {
             if (!IsReportTable)
             {
+
+                this.ReportTable.Available = false;
                 dataGridView1.Columns["ID"].Visible = false;
                 switch (this.Name)
                 {
@@ -386,7 +400,7 @@ namespace DataBase
             try
             {
                 command = new SQLiteCommand("DELETE FROM [" + nameTable + "] WHERE ["
-                                           + dt.Columns[0].ColumnName + "] = " +
+                                           + this.nameID + "] = " +
                                            dt.Rows[dataGridView1.CurrentRow.Index][0], sc);
                 command.ExecuteNonQuery();
                 dt.Clear();
@@ -409,6 +423,54 @@ namespace DataBase
                     dataGridView1.Rows[CurrentIndex].Cells[dataGridView1.ColumnCount - 1];
             }
         }
-
+        private void ReportTable_Click(object sender, EventArgs e)
+        {
+            int number = 0;
+            switch (this.Name)
+            {
+                case "Список клиентов":
+                    {
+                        number = 1;
+                        break;
+                    }
+                case "Работа парков":
+                    {
+                        number = 2;
+                        break;
+                    }
+                case "Списки автомобилей в парках":
+                    {
+                        number = 3;
+                        break;
+                    }
+                case "Списки сотрудников в парках":
+                    {
+                        number = 4;
+                        break;
+                    }
+                case "Автомобили по клиентам":
+                    {
+                        number = 5;
+                        break;
+                    }
+                case "Автомобили по сотрудникам":
+                    {
+                        number = 6;
+                        break;
+                    }
+                case "Аренда автомобиля":
+                    {
+                        number = 7;
+                        break;
+                    }
+                default:
+                    {
+                        return;
+                    }
+            }
+            CreateReport rep = new CreateReport(number, this.sc.ConnectionString);
+            rep.Text = this.Name;
+            rep.ShowDialog();
+        }
     }
 }

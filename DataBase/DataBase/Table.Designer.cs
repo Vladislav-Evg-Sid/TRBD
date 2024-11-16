@@ -35,6 +35,7 @@
             this.DelTable = new System.Windows.Forms.ToolStripButton();
             this.CloseTable = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ReportTable = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,10 +46,11 @@
             this.InsTable,
             this.EditTable,
             this.DelTable,
-            this.CloseTable});
+            this.CloseTable,
+            this.ReportTable});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(560, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -92,20 +94,30 @@
             this.CloseTable.Text = "Выход";
             this.CloseTable.Click += new System.EventHandler(this.CloseTable_Click);
             // 
+            // ReportTable
+            // 
+            this.ReportTable.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ReportTable.Image = ((System.Drawing.Image)(resources.GetObject("ReportTable.Image")));
+            this.ReportTable.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ReportTable.Name = "ReportTable";
+            this.ReportTable.Size = new System.Drawing.Size(128, 19);
+            this.ReportTable.Text = "Сформировать отчёт";
+            this.ReportTable.Click += new System.EventHandler(this.ReportTable_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 275);
             this.dataGridView1.TabIndex = 1;
             // 
             // Table
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 300);
+            this.ClientSize = new System.Drawing.Size(560, 300);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.ToolStripButton DelTable;
         private System.Windows.Forms.ToolStripButton CloseTable;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripButton ReportTable;
     }
 }
