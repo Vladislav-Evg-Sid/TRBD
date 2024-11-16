@@ -86,6 +86,18 @@ namespace DataBase
             }
             else if (rep == 7)
             {
+                label2.Text = "Выбирите автомобиль:";
+                tmp.Tables.Add(new DataTable("Auto"));
+                query = "SELECT ID_Auto, ID_Auto || '. ' || Brand || ' ' || Model AS [AutoName] FROM Auto JOIN Brand ON Auto.ID_Brand = Brand.ID_Brand JOIN Model ON Auto.ID_Model = Model.ID_Model";
+                a = new SQLiteDataAdapter(query, sc);
+                a.Fill(tmp.Tables["Auto"]);
+                if (tmp.Tables["Auto"].Rows.Count == 0)
+                {
+                    MessageBox.Show("Нет данных для формирования отчёта"); Close();
+                }
+                comboBox2.DisplayMember = tmp.Tables["Auto"].Columns["AutoName"].ToString();
+                comboBox2.ValueMember = tmp.Tables["Auto"].Columns["ID_Auto"].ToString();
+                comboBox2.DataSource = tmp.Tables["Auto"];
             }
         }
 
@@ -186,9 +198,33 @@ namespace DataBase
                 }
                 else if ((int)Tag == 6)
                 {
+                    query = "SELECT B.Brand AS [1], M.Model AS [2], R.Start_Date AS [3],  R.End_Date AS [4] " +
+                            "FROM Employee AS E JOIN Rent AS R ON E.ID_Employee = R.ID_Employee JOIN Auto AS A ON R.ID_Auto = A.ID_Auto JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model " +
+                            "WHERE E.ID_Employee = " + indCB;
+                    a = new SQLiteDataAdapter(query, sc);
+                    dt.Clear();
+                    a.Fill(dt);
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Нет данных для анализа"); return;
+                    }
+                    ColNames = new string[] { "Марка", "Модель", "Дата начала аренды", "Дата окончания аренды" };
+                    FirstLine = "Сотрудник номер " + indCB + ". ФИО: " + textCB;
                 }
                 else if ((int)Tag == 7)
                 {
+                    query = "SELECT R.Start_Date AS [1],  R.End_Date AS [2]" +
+                            "FROM Auto AS A JOIN Brand AS B  ON A.ID_Brand = B.ID_Brand JOIN Model AS M  ON A.ID_Model = M.ID_Model JOIN Rent AS R  ON A.ID_Auto = R.ID_Auto " +
+                            "WHERE A.ID_Auto = " + indCB;
+                    a = new SQLiteDataAdapter(query, sc);
+                    dt.Clear();
+                    a.Fill(dt);
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Нет данных для анализа"); return;
+                    }
+                    ColNames = new string[] { "Дата начала аренды", "Дата окончания аренды" };
+                    FirstLine = "Автомобмль номер " + indCB + ". Марка, модель: " + string.Join(" ", textCB.Split('.').Skip(1).ToArray());
                 }
                 else
                 {
@@ -231,9 +267,13 @@ namespace DataBase
                 }
             }
 
-            ObjWorkBook.SaveAs(path + Tag + ".xlsx");
-            ObjExcel.Quit();
-            MessageBox.Show("Отчёт сформирован");
+            try
+            {
+                ObjWorkBook.SaveAs(path + Tag + ".xlsx");
+                ObjExcel.Quit();
+                MessageBox.Show("Отчёт сформирован");
+            }
+            catch { }
         }
 
         private void CreateRep_Word(string path, string FirstLine, string[] ColNames)

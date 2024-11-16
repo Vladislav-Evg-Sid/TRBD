@@ -167,6 +167,7 @@ namespace DataBase
             a = new SQLiteDataAdapter(query, sc);
             a.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.ReadOnly = true;
             HideFields();
         }
         private void HideFields()
@@ -472,5 +473,6 @@ namespace DataBase
             rep.Text = this.Name;
             rep.ShowDialog();
         }
+
     }
 }

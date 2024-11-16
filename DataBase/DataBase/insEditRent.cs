@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,6 @@ namespace DataBase
             this.label3.Text = "Автомобиль";
             this.label4.Text = "Дата начала";
             this.label5.Text = "Дата окончания";
-            this.label6.Text = "Цена аренды";
             this.label7.Text = "Залог";
             this.label8.Text = "Статус аренды";
             tmp = new DataSet();
@@ -75,7 +75,6 @@ namespace DataBase
             this.label3.Text = "ID_Auto";
             this.label4.Text = "Дата начала аренды";
             this.label5.Text = "Дата окончания аренды";
-            this.label6.Text = "Цена аренды";
             this.label7.Text = "Залог";
             this.label8.Text = "Статус аренды";
             tmp = new DataSet();
@@ -108,7 +107,6 @@ namespace DataBase
             comboBox4.DataSource = tmp.Tables["Rent_Status"];
             textBox1.Text = dr["Дата начала аренды"].ToString();
             textBox2.Text = dr["Дата окончания аренды"].ToString();
-            textBox3.Text = dr["Стоимость аренды"].ToString();
             textBox4.Text = dr["Залог"].ToString();
             comboBox1.SelectedValue = dr["ID_Employee"];
             comboBox2.SelectedValue = dr["ID_Client"];
@@ -123,44 +121,63 @@ namespace DataBase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0) & (textBox3.Text.Count() == 0) & (textBox4.Text.Count() == 0))
+            if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0) & (textBox4.Text.Count() == 0))
+            { MessageBox.Show("Не все поля заполнены"); return;}
+            if (!TextIsDate(textBox1.Text))
+            { MessageBox.Show("Дата начала аренды введене некорректно"); return; }
+            if (!TextIsDate(textBox2.Text))
+            { MessageBox.Show("Дата окончания аренды введене некорректно"); return; }
+            DateTime dt1 = DateTime.ParseExact(textBox1.Text, "dd.MM.yyyy", null);
+            DateTime dt2 = DateTime.ParseExact(textBox2.Text, "dd.MM.yyyy", null);
+            TimeSpan ts = dt2 - dt1;
+            int days = ts.Days + 1;
+            if (days < 1)
+            { MessageBox.Show("Дата начала должна быть не позже даты окончания аренды"); return; }
+
+            sc.Open();
+            int summ = 100;
+            if ((int)Tag == 0)
             {
-                MessageBox.Show("Не все поля заполнены");
+                command = new SQLiteCommand("INSERT INTO Rent (ID_Employee, ID_Client, ID_Auto, Start_Date, End_Date, Rent_Price, Pledge, ID_Status) VALUES('"
+                    + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + int.Parse(comboBox2.SelectedValue.ToString()) + "', '" + int.Parse(comboBox3.SelectedValue.ToString()) +
+                    "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + summ + "', '"
+                    +textBox4.Text + "', '" + int.Parse(comboBox4.SelectedValue.ToString()) + "')", sc);
             }
             else
             {
-                sc.Open();
-
-                if ((int)Tag == 0)
-                {
-                    command = new SQLiteCommand("INSERT INTO Rent (ID_Employee, ID_Client, ID_Auto, Start_Date, End_Date, Rent_Price, Pledge, ID_Status) VALUES('"
-                        + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + int.Parse(comboBox2.SelectedValue.ToString()) + "', '" + int.Parse(comboBox3.SelectedValue.ToString()) +
-                        "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '"
-                        +textBox4.Text + "', '" + int.Parse(comboBox4.SelectedValue.ToString()) + "')", sc);
-                }
-                else
-                {
-                    command = new SQLiteCommand("UPDATE Rent  SET ID_Employee = ? ,  ID_Client =? , ID_Auto =? , Start_Date =? , End_Date =? , Rent_Price =? , " +
-                        "Pledge =? , ID_Status = ?  WHERE ID_Rent = ? ", sc);
-                    command.Parameters.AddWithValue("@ID_Employee", int.Parse(comboBox1.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("@ID_Client", int.Parse(comboBox2.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("@ID_Auto", int.Parse(comboBox3.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("@Start_Date", textBox1.Text);
-                    command.Parameters.AddWithValue("@End_Date", textBox2.Text);
-                    command.Parameters.AddWithValue("@Rent_Price", textBox3.Text);
-                    command.Parameters.AddWithValue("@Pledge", textBox3.Text);
-                    command.Parameters.AddWithValue("ID_Status", int.Parse(comboBox4.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("@ID_Rent", dr[0]);
-                }
-
-                command.ExecuteNonQuery();
-                sc.Close();
-                Close();
+                command = new SQLiteCommand("UPDATE Rent  SET ID_Employee = ? ,  ID_Client =? , ID_Auto =? , Start_Date =? , End_Date =? , Rent_Price =? , " +
+                    "Pledge =? , ID_Status = ?  WHERE ID_Rent = ? ", sc);
+                command.Parameters.AddWithValue("@ID_Employee", int.Parse(comboBox1.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("@ID_Client", int.Parse(comboBox2.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("@ID_Auto", int.Parse(comboBox3.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("@Start_Date", textBox1.Text);
+                command.Parameters.AddWithValue("@End_Date", textBox2.Text);
+                command.Parameters.AddWithValue("@Rent_Price", summ);
+                command.Parameters.AddWithValue("@Pledge", textBox4.Text);
+                command.Parameters.AddWithValue("ID_Status", int.Parse(comboBox4.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("@ID_Rent", dr[0]);
             }
+
+            command.ExecuteNonQuery();
+            sc.Close();
+            Close();
         }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        static bool TextIsDate(string text)
+        {
+            var dateFormat = "dd.MM.yyyy";
+            DateTime scheduleDate;
+            return (DateTime.TryParseExact(text, dateFormat, DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out scheduleDate)) ;
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.V))
+                return true;
+            else
+                return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

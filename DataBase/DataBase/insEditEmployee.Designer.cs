@@ -129,6 +129,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(174, 20);
             this.textBox5.TabIndex = 20;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
             // 
@@ -141,6 +142,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(142, 150);
             this.comboBox1.Name = "comboBox1";

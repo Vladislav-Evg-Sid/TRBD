@@ -139,5 +139,18 @@ namespace DataBase
         {
 
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.V))
+                return true;
+            else
+                return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

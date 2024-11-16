@@ -48,6 +48,7 @@
             // comboBox1
             // 
             this.comboBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Word",
@@ -89,6 +90,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(11, 65);
             this.comboBox2.Name = "comboBox2";
