@@ -86,6 +86,7 @@
             this.Name = "InsEditSprav";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InsEdit";
+            this.Load += new System.EventHandler(this.InsEditSprav_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

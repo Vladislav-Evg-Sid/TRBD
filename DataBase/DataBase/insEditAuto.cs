@@ -64,9 +64,9 @@ namespace DataBase
             comboBox4.DataSource = tmp.Tables["Transmission"];
             tmp = new DataSet();
             tmp.Tables.Add(new DataTable("Park"));
-            a = new SQLiteDataAdapter("SELECT ID_Park FROM Park", sc);
+            a = new SQLiteDataAdapter("SELECT Park.ID_Park, Park.ID_Park || '.' || City.City || '.' || Park.Street || '.' || Park.House_Number AS [Par] FROM Park JOIN City ON Park.ID_City = City.ID_City", sc);
             a.Fill(tmp.Tables["Park"]);
-            comboBox5.DisplayMember = tmp.Tables["Park"].Columns["ID_Park"].ToString();
+            comboBox5.DisplayMember = tmp.Tables["Park"].Columns["Par"].ToString();
             comboBox5.ValueMember = tmp.Tables["Park"].Columns["ID_Park"].ToString();
             comboBox5.DataSource = tmp.Tables["Park"];
         }
@@ -83,7 +83,7 @@ namespace DataBase
             this.label4.Text = "Трансмиссия";
             this.label5.Text = "Цена аренды";
             this.label6.Text = "Год выпуска";
-            this.label7.Text = "ID_Park";
+            this.label7.Text = "Номер парка";
             this.label8.Text = "Расход топлива";
             tmp = new DataSet();
             tmp.Tables.Add(new DataTable("Brand"));
@@ -115,9 +115,9 @@ namespace DataBase
             comboBox4.DataSource = tmp.Tables["Transmission"];
             tmp = new DataSet();
             tmp.Tables.Add(new DataTable("Park"));
-            a = new SQLiteDataAdapter("SELECT ID_Park FROM Park", sc);
+            a = new SQLiteDataAdapter("SELECT Park.ID_Park, Park.ID_Park || '.' || City.City || '.' || Park.Street || '.' || Park.House_Number AS [Par] FROM Park JOIN City ON Park.ID_City = City.ID_City", sc);
             a.Fill(tmp.Tables["Park"]);
-            comboBox5.DisplayMember = tmp.Tables["Park"].Columns["ID_Park"].ToString();
+            comboBox5.DisplayMember = tmp.Tables["Park"].Columns["Par"].ToString();
             comboBox5.ValueMember = tmp.Tables["Park"].Columns["ID_Park"].ToString();
             comboBox5.DataSource = tmp.Tables["Park"];
             maskedTextBox1.Text = dr["Цена аренды"].ToString();
@@ -186,6 +186,7 @@ namespace DataBase
             if ((maskedTextBox1.Text.Count() == 0) & (maskedTextBox2.Text.Count() == 0) & (maskedTextBox3.Text.Count() == 0))
             {
                 MessageBox.Show("Не все поля заполнены");
+                return;
             }
             int year = int.Parse(maskedTextBox2.Text);
             int price = int.Parse(maskedTextBox1.Text);

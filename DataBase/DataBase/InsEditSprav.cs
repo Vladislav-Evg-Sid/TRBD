@@ -60,6 +60,7 @@ namespace DataBase
             if (textBox1.Text.Count() == 0)
             {
                 MessageBox.Show("Не все поля заполнены");
+                return;
             }
             else
             {
@@ -82,6 +83,12 @@ namespace DataBase
                 Close();
             }
         }
+
+        private void InsEditSprav_Load(object sender, EventArgs e)
+        {
+
+        }
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Control | Keys.V))

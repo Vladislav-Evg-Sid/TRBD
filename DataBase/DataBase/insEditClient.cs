@@ -65,50 +65,61 @@ namespace DataBase
         {
             if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0) & (maskedTextBox1.Text.Count() == 0) & (maskedTextBox2.Text.Count() == 0)
                 & (maskedTextBox3.Text.Count() == 0) & (maskedTextBox4.Text.Count() == 0))
+                
 
             {
                 MessageBox.Show("Не все поля заполнены");
+                return;
             }
+            int expirience = int.Parse(maskedTextBox2.Text);
             if ((maskedTextBox1.Text.Count() < 11))
             {
                 MessageBox.Show("Водительсоке удостоверение не до конца заполнено!");
+                return;
             }
             if ((maskedTextBox3.Text.Count() < 11))
             {
                 MessageBox.Show("Номер не до конца заполнен!");
+                return;
+            }
+            if (expirience == 0)
+            {
+                MessageBox.Show("Стаж не может быть равным 0");
+                return;
             }
             if ((maskedTextBox4.Text.Count() < 10))
             {
                 MessageBox.Show("Дата рождения не до конца заполнена!");
+                return;
+            }
+
+
+            sc.Open();
+
+            if ((int)Tag == 0)
+            {
+                command = new SQLiteCommand("INSERT INTO Client (Client_Surname, Client_Name, Client_Patronymic, License, Expirience, Phone_Number, Date_of_Birth) VALUES('"
+                    + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '"
+                    + maskedTextBox3.Text + "', '" + maskedTextBox4.Text + "')", sc);
             }
             else
             {
-                sc.Open();
-
-                if ((int)Tag == 0)
-                {
-                    command = new SQLiteCommand("INSERT INTO Client (Client_Surname, Client_Name, Client_Patronymic, License, Expirience, Phone_Number, Date_of_Birth) VALUES('"
-                        + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '"
-                        + maskedTextBox3.Text + "', '" + maskedTextBox4.Text + "')", sc);
-                }
-                else
-                {
-                    command = new SQLiteCommand("UPDATE Client  SET Client_Surname =? , Client_Name =? , Client_Patronymic =? , License =? , Expirience =? , " +
-                        "Phone_Number =? , Date_of_Birth = ?  WHERE ID_Client = ? ", sc);
-                    command.Parameters.AddWithValue("@Client_Surname", textBox1.Text);
-                    command.Parameters.AddWithValue("@Client_Name", textBox2.Text);
-                    command.Parameters.AddWithValue("@Client_Patronymic", textBox3.Text);
-                    command.Parameters.AddWithValue("@License", maskedTextBox1.Text);
-                    command.Parameters.AddWithValue("@Expirience", maskedTextBox2.Text);
-                    command.Parameters.AddWithValue("@Phone_Number", maskedTextBox3.Text);
-                    command.Parameters.AddWithValue("@Date_of_Birth", maskedTextBox4.Text);
-                    command.Parameters.AddWithValue("@ID_Client", dr[0]);
-                }
-
-                command.ExecuteNonQuery();
-                sc.Close();
-                Close();
+                command = new SQLiteCommand("UPDATE Client  SET Client_Surname =? , Client_Name =? , Client_Patronymic =? , License =? , Expirience =? , " +
+                    "Phone_Number =? , Date_of_Birth = ?  WHERE ID_Client = ? ", sc);
+                command.Parameters.AddWithValue("@Client_Surname", textBox1.Text);
+                command.Parameters.AddWithValue("@Client_Name", textBox2.Text);
+                command.Parameters.AddWithValue("@Client_Patronymic", textBox3.Text);
+                command.Parameters.AddWithValue("@License", maskedTextBox1.Text);
+                command.Parameters.AddWithValue("@Expirience", maskedTextBox2.Text);
+                command.Parameters.AddWithValue("@Phone_Number", maskedTextBox3.Text);
+                command.Parameters.AddWithValue("@Date_of_Birth", maskedTextBox4.Text);
+                command.Parameters.AddWithValue("@ID_Client", dr[0]);
             }
+
+            command.ExecuteNonQuery();
+            sc.Close();
+            Close();
+
         }
         private void button2_Click(object sender, EventArgs e)
         {

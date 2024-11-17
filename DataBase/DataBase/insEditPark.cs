@@ -73,49 +73,53 @@ namespace DataBase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text.Count() == 0) & (maskedTextBox1.Text.Count() == 0)& (maskedTextBox2.Text.Count() == 0) & (maskedTextBox3.Text.Count() == 0))
+            if ((textBox1.Text.Count() == 0) & (maskedTextBox1.Text.Count() == 0) & (maskedTextBox2.Text.Count() == 0) & (maskedTextBox3.Text.Count() == 0))
             {
                 MessageBox.Show("Не все поля заполнены");
+                return;
             }
             int street = int.Parse(maskedTextBox1.Text);
             if (street < 1)
             {
                 MessageBox.Show("Номер дома введен неверно!");
+                return;
             }
             if (maskedTextBox2.Text.Count() < 5)
             {
                 MessageBox.Show("Время начала работы введено неверно!");
+                return;
             }
             if (maskedTextBox3.Text.Count() < 5)
             {
                 MessageBox.Show("Время окончания работы введено неверно!");
+                return;
+            }
+
+
+            sc.Open();
+
+            if ((int)Tag == 0)
+            {
+                command = new SQLiteCommand("INSERT INTO PARK (ID_City, Street, House_Number, Start_Time, End_Time) VALUES('"
+                    + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + textBox1.Text + "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '"
+                    + maskedTextBox3.Text + "')", sc);
             }
             else
             {
-                sc.Open();
-
-                if ((int)Tag == 0)
-                {
-                    command = new SQLiteCommand("INSERT INTO PARK (ID_City, Street, House_Number, Start_Time, End_Time) VALUES('"
-                        + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + textBox1.Text+ "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '" 
-                        + maskedTextBox3.Text + "')", sc);
-                }
-                else
-                {
-                    command = new SQLiteCommand("UPDATE Park  SET ID_City =? , Street =? , House_Number =? , Start_Time =? , End_Time =? " +
-                        "WHERE ID_Park = ? ", sc);
-                    command.Parameters.AddWithValue("ID_City",int.Parse(comboBox1.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("@Street", textBox1.Text);
-                    command.Parameters.AddWithValue("@House_Number", maskedTextBox1.Text);
-                    command.Parameters.AddWithValue("@Start_Time", maskedTextBox2.Text);
-                    command.Parameters.AddWithValue("@End_Time", maskedTextBox3.Text);
-                    command.Parameters.AddWithValue("@ID_Park", dr[0]);
-                }
-
-                command.ExecuteNonQuery();
-                sc.Close();
-                Close();
+                command = new SQLiteCommand("UPDATE Park  SET ID_City =? , Street =? , House_Number =? , Start_Time =? , End_Time =? " +
+                    "WHERE ID_Park = ? ", sc);
+                command.Parameters.AddWithValue("ID_City", int.Parse(comboBox1.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("@Street", textBox1.Text);
+                command.Parameters.AddWithValue("@House_Number", maskedTextBox1.Text);
+                command.Parameters.AddWithValue("@Start_Time", maskedTextBox2.Text);
+                command.Parameters.AddWithValue("@End_Time", maskedTextBox3.Text);
+                command.Parameters.AddWithValue("@ID_Park", dr[0]);
             }
+
+            command.ExecuteNonQuery();
+            sc.Close();
+            Close();
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
