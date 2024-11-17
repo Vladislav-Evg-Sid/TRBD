@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Git\\TRBD\\DataBase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\TRBD\\DataBase\\database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\trbd\\database\\database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\trbd\\database\\database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\TRBD\\DataBase\\database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,7 +43,7 @@
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditpark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\trbd\\database\\database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\TRBD\\DataBase\\database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -78,8 +78,7 @@
               "RelativeToolTip": "DataBase\\insEditEmployee.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAEwDYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:49:28.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T15:49:28.255Z"
             },
             {
               "$type": "Document",
@@ -89,7 +88,7 @@
               "RelativeDocumentMoniker": "DataBase\\insEditRent.cs",
               "ToolTip": "C:\\Git\\TRBD\\DataBase\\DataBase\\insEditRent.cs",
               "RelativeToolTip": "DataBase\\insEditRent.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAASwI8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAASwIwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T16:24:30.638Z",
               "EditorCaption": ""
@@ -103,8 +102,7 @@
               "ToolTip": "C:\\Git\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "DataBase\\insEditEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:49:26.574Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-11-16T15:49:26.574Z"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "DataBase\\insEditClient.cs",
               "ViewState": "AgIAADsAAAAAAAAAAADgv1QAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T14:36:16.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T14:36:16.205Z"
             },
             {
               "$type": "Document",
@@ -128,8 +125,7 @@
               "ToolTip": "C:\\Git\\TRBD\\DataBase\\DataBase\\insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "DataBase\\insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:04:15.365Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-11-16T15:04:15.365Z"
             },
             {
               "$type": "Document",
@@ -141,8 +137,7 @@
               "RelativeToolTip": "DataBase\\insEditAuto.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAtwEQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:04:17.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T15:04:17.077Z"
             },
             {
               "$type": "Document",
@@ -153,8 +148,7 @@
               "ToolTip": "C:\\Git\\TRBD\\DataBase\\DataBase\\insEditPark.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "DataBase\\insEditPark.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:55:30.635Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-11-16T15:55:30.635Z"
             },
             {
               "$type": "Document",
@@ -166,8 +160,7 @@
               "RelativeToolTip": "DataBase\\insEditPark.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAhwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:55:32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T15:55:32Z"
             },
             {
               "$type": "Document",
@@ -179,8 +172,7 @@
               "RelativeToolTip": "DataBase\\Form1.Designer.cs",
               "ViewState": "AgIAAJUAAAAAAAAAAAAQwK8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T13:56:07.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T13:56:07.955Z"
             },
             {
               "$type": "Document",
@@ -191,8 +183,7 @@
               "ToolTip": "C:\\Git\\TRBD\\DataBase\\DataBase\\insEditClient.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "DataBase\\insEditClient.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T14:36:13.462Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-11-16T14:36:13.462Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "DataBase\\InsEditSprav.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAASwEEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T08:05:03.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T08:05:03.339Z"
             },
             {
               "$type": "Document",
@@ -216,8 +206,7 @@
               "ToolTip": "C:\\Git\\TRBD\\DataBase\\DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T16:22:48.611Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-11-16T16:22:48.611Z"
             },
             {
               "$type": "Document",
@@ -241,8 +230,7 @@
               "RelativeToolTip": "DataBase\\insEditAuto.Designer.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAQwDoAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:10:07.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T15:10:07.357Z"
             }
           ]
         }

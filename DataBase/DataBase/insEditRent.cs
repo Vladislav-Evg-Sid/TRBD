@@ -138,7 +138,7 @@ namespace DataBase
             if (pledge == 0)
             {
                 MessageBox.Show("Залог не может быть равным 0!");return;
-            }
+            } 
             sc.Open();
             int summ = 100;
             if ((int)Tag == 0)
