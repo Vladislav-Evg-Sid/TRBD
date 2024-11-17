@@ -134,43 +134,40 @@ namespace DataBase
         {
             if ((maskedTextBox1.Text.Count() == 0) & (maskedTextBox2.Text.Count() == 0) & (maskedTextBox3.Text.Count() == 0))
             {
-                MessageBox.Show("Не все поля заполнены");
+                MessageBox.Show("Не все поля заполнены"); return;
             }
             if (maskedTextBox2.Text.Count() < 4)
             {
-                MessageBox.Show("Год заполнен не до конца!");
+                MessageBox.Show("Год заполнен не до конца!"); return;
             }
             
+            sc.Open();
+
+            if ((int)Tag == 0)
+            {
+                command = new SQLiteCommand("INSERT INTO Auto (ID_Brand, ID_Model, ID_Fuel, ID_Transmission, Rent_Price, Year, ID_Park, Fuel_Consumption) VALUES('"
+                    + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + int.Parse(comboBox2.SelectedValue.ToString()) + "', '" + int.Parse(comboBox3.SelectedValue.ToString()) +
+                    "', '" + int.Parse(comboBox4.SelectedValue.ToString()) + "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '"
+                    + int.Parse(comboBox5.SelectedValue.ToString()) + "', '" + maskedTextBox3.Text + "')", sc);
+            }
             else
             {
-                sc.Open();
-
-                if ((int)Tag == 0)
-                {
-                    command = new SQLiteCommand("INSERT INTO Auto (ID_Brand, ID_Model, ID_Fuel, ID_Transmission, Rent_Price, Year, ID_Park, Fuel_Consumption) VALUES('"
-                        + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + int.Parse(comboBox2.SelectedValue.ToString()) + "', '" + int.Parse(comboBox3.SelectedValue.ToString()) +
-                        "', '" + int.Parse(comboBox4.SelectedValue.ToString()) + "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '"
-                        + int.Parse(comboBox5.SelectedValue.ToString()) + "', '" + maskedTextBox3.Text + "')", sc);
-                }
-                else
-                {
-                    command = new SQLiteCommand("UPDATE Auto  SET ID_Brand =? , ID_Model =? , ID_Fuel =? , ID_Transmission =? , Rent_Price =? , " +
-                        "Year =? , ID_Park = ? , Fuel_Consuption = ?  WHERE ID_Auto = ? ", sc);
-                    command.Parameters.AddWithValue("ID_Brand", int.Parse(comboBox1.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("ID_Model", int.Parse(comboBox2.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("ID_Fuel", int.Parse(comboBox3.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("ID_Transmission", int.Parse(comboBox4.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("@Rent_Price", maskedTextBox1.Text);
-                    command.Parameters.AddWithValue("@Year", maskedTextBox2.Text);
-                    command.Parameters.AddWithValue("ID_Park", int.Parse(comboBox5.SelectedValue.ToString()));
-                    command.Parameters.AddWithValue("@Fuel_Consumption", maskedTextBox3.Text);
-                    command.Parameters.AddWithValue("@ID_Auto", dr[0]);
-                }
-
-                command.ExecuteNonQuery();
-                sc.Close();
-                Close();
+                command = new SQLiteCommand("UPDATE Auto  SET ID_Brand =? , ID_Model =? , ID_Fuel =? , ID_Transmission =? , Rent_Price =? , " +
+                    "Year =? , ID_Park = ? , Fuel_Consuption = ?  WHERE ID_Auto = ? ", sc);
+                command.Parameters.AddWithValue("ID_Brand", int.Parse(comboBox1.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("ID_Model", int.Parse(comboBox2.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("ID_Fuel", int.Parse(comboBox3.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("ID_Transmission", int.Parse(comboBox4.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("@Rent_Price", maskedTextBox1.Text);
+                command.Parameters.AddWithValue("@Year", maskedTextBox2.Text);
+                command.Parameters.AddWithValue("ID_Park", int.Parse(comboBox5.SelectedValue.ToString()));
+                command.Parameters.AddWithValue("@Fuel_Consumption", maskedTextBox3.Text);
+                command.Parameters.AddWithValue("@ID_Auto", dr[0]);
             }
+
+            command.ExecuteNonQuery();
+            sc.Close();
+            Close();
         }
         private void button2_Click(object sender, EventArgs e)
         {

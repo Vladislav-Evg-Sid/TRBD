@@ -156,7 +156,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateReport.cs" />
+    <Compile Include="CreateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateReport.Designer.cs">
       <DependentUpon>CreateReport.cs</DependentUpon>
     </Compile>

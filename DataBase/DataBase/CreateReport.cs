@@ -8,14 +8,16 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Excel = Microsoft.Office.Interop.Excel;
-//using Word = Microsoft.Office.Interop.Word;
+using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;
 using PDF = Aspose.Pdf;
 using System.Data.SQLite;
 using Microsoft.Office.Core;
 using Aspose.Pdf.Text;
 using Aspose.Pdf.AI;
-/*
+using System.Reflection;
+using System.IO;
+
 namespace DataBase
 {
     public partial class CreateReport : Form
@@ -108,7 +110,7 @@ namespace DataBase
 
         private void Create_Report(object sender, EventArgs e)
         {
-            string path = @"E:\Проги\git\Лабы\Отчёт";
+            string path = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, "..\\..\\..")) + "\\Отчёт";
             string typeFile = comboBox1.SelectedItem.ToString();
             int indCB = 0;
             string textCB = "";
@@ -271,7 +273,7 @@ namespace DataBase
             {
                 ObjWorkBook.SaveAs(path + Tag + ".xlsx");
                 ObjExcel.Quit();
-                MessageBox.Show("Отчёт сформирован");
+                MessageBox.Show("Отчёт сформирован\nПуть к файлу:\n" + path + Tag + ".xlsx");
             }
             catch { }
         }
@@ -306,7 +308,7 @@ namespace DataBase
             wrdApp.Quit();
             wrdDoc = null;
             wrdApp = null;
-            MessageBox.Show("Отчёт сформирован");
+            MessageBox.Show("Отчёт сформирован\nПуть к файлу:\n" + path + Tag + ".docx");
         }
     
         private void CreateRep_PDF(string path, string FirstLine, string[] ColNames)
@@ -351,8 +353,7 @@ namespace DataBase
             page.Paragraphs.Add(table);
             pdfDoc.Save(path + Tag + ".pdf");
             pdfDoc.Dispose();
-            MessageBox.Show("Отчёт сформирован");
+            MessageBox.Show("Отчёт сформирован\nПуть к файлу:\n" + path + Tag + ".pdf");
         }
     }
 }
-*/

@@ -62,26 +62,34 @@ namespace DataBase
                 MessageBox.Show("Не все поля заполнены");
                 return;
             }
+            sc.Open();
+
+            if ((int)Tag == 0)
+            {
+                command = new SQLiteCommand("INSERT INTO " + TableName + " (" + PoleName + ") VALUES('"
+                    + textBox1.Text + "')", sc);
+            }
             else
             {
-                sc.Open();
-
-                if ((int)Tag == 0)
-                {
-                    command = new SQLiteCommand("INSERT INTO " + TableName + " (" + PoleName + ") VALUES('"
-                        + textBox1.Text + "')", sc);
-                }
-                else
-                {
-                    command = new SQLiteCommand("UPDATE " + TableName + " SET " + PoleName + " = ? WHERE ID_" + PoleName + " = ?", sc);
-                    command.Parameters.AddWithValue("@" + PoleName, textBox1.Text);
-                    command.Parameters.AddWithValue("@ID_" + PoleName, dr[0]);
-                }
-
-                command.ExecuteNonQuery();
-                sc.Close();
-                Close();
+                command = new SQLiteCommand("UPDATE " + TableName + " SET " + PoleName + " = ? WHERE ID_" + PoleName + " = ?", sc);
+                command.Parameters.AddWithValue("@" + PoleName, textBox1.Text);
+                command.Parameters.AddWithValue("@ID_" + PoleName, dr[0]);
             }
+
+            command.ExecuteNonQuery();
+            sc.Close();
+            if ((int)Tag != 0)
+            {
+                string[] list2apd = new string[] { "Парки", "Сотрудники", "Автомобили", "Клиенты", "Аренды", "Список клиентов", "Работа парков", "Списки автомобилей в парках", "Списки сотрудников в парках", "Автомобили по клиентам", "Автомобили по сотрудникам", "Аренда автомобиля" };
+                foreach (Form f in Application.OpenForms)
+                {
+                    if (list2apd.Contains(f.Text))
+                    {
+                        ((Table)f).Apdate();
+                    }
+                }
+            }
+            Close();
         }
 
         private void InsEditSprav_Load(object sender, EventArgs e)
