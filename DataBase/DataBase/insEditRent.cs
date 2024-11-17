@@ -36,27 +36,19 @@ namespace DataBase
             this.label8.Text = "Статус аренды";
             tmp = new DataSet();
             tmp.Tables.Add(new DataTable("Employee"));
-            a = new SQLiteDataAdapter("SELECT ID_Employee, ID_Employee || '. '|| Employee_Surname || ' ' || SUBSTR(Employee_Name, 1, 1) || '.' AS [Emp] FROM Employee", sc);
-            a.Fill(tmp.Tables["Employee"]);
-            comboBox1.DisplayMember = tmp.Tables["Employee"].Columns["Emp"].ToString();
-            comboBox1.ValueMember = tmp.Tables["Employee"].Columns["ID_Employee"].ToString();
-            comboBox1.DataSource = tmp.Tables["Employee"];
-            tmp = new DataSet();
             tmp.Tables.Add(new DataTable("Client"));
+            tmp.Tables.Add(new DataTable("Auto"));
+            tmp.Tables.Add(new DataTable("Rent_Status"));
             a = new SQLiteDataAdapter("SELECT ID_Client, ID_Client || '. '|| Client_Surname || ' ' || SUBSTR(Client_Name, 1, 1) || '.' AS [Cli] FROM Client", sc);
             a.Fill(tmp.Tables["Client"]);
             comboBox2.DisplayMember = tmp.Tables["Client"].Columns["Cli"].ToString();
             comboBox2.ValueMember = tmp.Tables["Client"].Columns["ID_Client"].ToString();
             comboBox2.DataSource = tmp.Tables["Client"];
-            tmp = new DataSet();
-            tmp.Tables.Add(new DataTable("Auto"));
             a = new SQLiteDataAdapter("SELECT Auto.ID_Auto, Auto.ID_Auto || '. '|| Brand.Brand || ' ' || Model.Model AS [Aut] FROM Auto JOIN Brand ON Auto.ID_Brand = Brand.ID_Brand JOIN Model ON Auto.ID_Model = Model.ID_Model", sc);
             a.Fill(tmp.Tables["Auto"]);
             comboBox3.DisplayMember = tmp.Tables["Auto"].Columns["Aut"].ToString();
             comboBox3.ValueMember = tmp.Tables["Auto"].Columns["ID_Auto"].ToString();
             comboBox3.DataSource = tmp.Tables["Auto"];
-            tmp = new DataSet();
-            tmp.Tables.Add(new DataTable("Rent_Status"));
             a = new SQLiteDataAdapter("SELECT ID_Status, Status FROM Rent_Status", sc);
             a.Fill(tmp.Tables["Rent_Status"]);
             comboBox4.DisplayMember = tmp.Tables["Rent_Status"].Columns["Status"].ToString();
@@ -70,36 +62,28 @@ namespace DataBase
             sc = new SQLiteConnection();
             this.sc.ConnectionString = ConnectionString;
             this.dr = dr;
-            this.label1.Text = "ID_Employee";
-            this.label2.Text = "ID_Client";
-            this.label3.Text = "ID_Auto";
-            this.label4.Text = "Дата начала аренды";
-            this.label5.Text = "Дата окончания аренды";
+            this.label1.Text = "Сотрудник";
+            this.label2.Text = "Клиент";
+            this.label3.Text = "Автомобиль";
+            this.label4.Text = "Дата начала";
+            this.label5.Text = "Дата окончания";
             this.label7.Text = "Залог";
             this.label8.Text = "Статус аренды";
             tmp = new DataSet();
             tmp.Tables.Add(new DataTable("Employee"));
-            a = new SQLiteDataAdapter("SELECT ID_Employee FROM Employee", sc);
-            a.Fill(tmp.Tables["Employee"]);
-            comboBox1.DisplayMember = tmp.Tables["Employee"].Columns["ID_Employee"].ToString();
-            comboBox1.ValueMember = tmp.Tables["Employee"].Columns["ID_Employee"].ToString();
-            comboBox1.DataSource = tmp.Tables["Employee"];
-            tmp = new DataSet();
             tmp.Tables.Add(new DataTable("Client"));
-            a = new SQLiteDataAdapter("SELECT ID_Client FROM Client", sc);
+            tmp.Tables.Add(new DataTable("Auto"));
+            tmp.Tables.Add(new DataTable("Rent_Status"));
+            a = new SQLiteDataAdapter("SELECT ID_Client, ID_Client || '. '|| Client_Surname || ' ' || SUBSTR(Client_Name, 1, 1) || '.' AS [Cli] FROM Client", sc);
             a.Fill(tmp.Tables["Client"]);
-            comboBox2.DisplayMember = tmp.Tables["Client"].Columns["ID_Client"].ToString();
+            comboBox2.DisplayMember = tmp.Tables["Client"].Columns["Cli"].ToString();
             comboBox2.ValueMember = tmp.Tables["Client"].Columns["ID_Client"].ToString();
             comboBox2.DataSource = tmp.Tables["Client"];
-            tmp = new DataSet();
-            tmp.Tables.Add(new DataTable("Auto"));
-            a = new SQLiteDataAdapter("SELECT ID_Auto FROM Auto", sc);
+            a = new SQLiteDataAdapter("SELECT Auto.ID_Auto, Auto.ID_Auto || '. '|| Brand.Brand || ' ' || Model.Model AS [Aut] FROM Auto JOIN Brand ON Auto.ID_Brand = Brand.ID_Brand JOIN Model ON Auto.ID_Model = Model.ID_Model", sc);
             a.Fill(tmp.Tables["Auto"]);
-            comboBox3.DisplayMember = tmp.Tables["Auto"].Columns["ID_Auto"].ToString();
+            comboBox3.DisplayMember = tmp.Tables["Auto"].Columns["Aut"].ToString();
             comboBox3.ValueMember = tmp.Tables["Auto"].Columns["ID_Auto"].ToString();
             comboBox3.DataSource = tmp.Tables["Auto"];
-            tmp = new DataSet();
-            tmp.Tables.Add(new DataTable("Rent_Status"));
             a = new SQLiteDataAdapter("SELECT ID_Status, Status FROM Rent_Status", sc);
             a.Fill(tmp.Tables["Rent_Status"]);
             comboBox4.DisplayMember = tmp.Tables["Rent_Status"].Columns["Status"].ToString();
@@ -134,8 +118,17 @@ namespace DataBase
             if (days < 1)
             { MessageBox.Show("Дата начала должна быть не позже даты окончания аренды"); return; }
 
+            tmp = new DataSet();
+            tmp.Tables.Add(new DataTable("Auto_Cost"));
+            a = new SQLiteDataAdapter("SELECT Rent_Price FROM Auto WHERE ID_Auto = " + int.Parse(comboBox3.SelectedValue.ToString()), sc);
+            a.Fill(tmp.Tables["Auto_Cost"]);
+
+
+
+            int summ = Convert.ToInt32(tmp.Tables["Auto_Cost"].Rows[0][0]);
+            summ = summ * days;
+
             sc.Open();
-            int summ = 100;
             if ((int)Tag == 0)
             {
                 command = new SQLiteCommand("INSERT INTO Rent (ID_Employee, ID_Client, ID_Auto, Start_Date, End_Date, Rent_Price, Pledge, ID_Status) VALUES('"
@@ -172,6 +165,24 @@ namespace DataBase
             DateTime scheduleDate;
             return (DateTime.TryParseExact(text, dateFormat, DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out scheduleDate)) ;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Change_Park(object sender, EventArgs e)
+        {
+            a = new SQLiteDataAdapter(
+                "SELECT ID_Employee, ID_Employee || '. '|| Employee_Surname || ' ' || SUBSTR(Employee_Name, 1, 1) || '.' AS [Emp]" +
+                "FROM Employee WHERE ID_Employee = " + int.Parse(comboBox3.SelectedValue.ToString()), sc);
+            tmp.Tables["Employee"].Clear();
+            a.Fill(tmp.Tables["Employee"]);
+            comboBox1.DisplayMember = tmp.Tables["Employee"].Columns["Emp"].ToString();
+            comboBox1.ValueMember = tmp.Tables["Employee"].Columns["ID_Employee"].ToString();
+            comboBox1.DataSource = tmp.Tables["Employee"];
+        }
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Control | Keys.V))

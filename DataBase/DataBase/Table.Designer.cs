@@ -95,7 +95,7 @@
             this.CloseTable.Click += new System.EventHandler(this.CloseTable_Click);
             // 
             // ReportTable
-            /* 
+            // 
             this.ReportTable.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ReportTable.Image = ((System.Drawing.Image)(resources.GetObject("ReportTable.Image")));
             this.ReportTable.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -103,7 +103,7 @@
             this.ReportTable.Size = new System.Drawing.Size(128, 19);
             this.ReportTable.Text = "Сформировать отчёт";
             this.ReportTable.Click += new System.EventHandler(this.ReportTable_Click);
-            */ 
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

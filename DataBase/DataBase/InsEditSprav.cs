@@ -79,6 +79,17 @@ namespace DataBase
 
                 command.ExecuteNonQuery();
                 sc.Close();
+                if ((int)Tag != 0)
+                {
+                    string[] list2apd = new string[] { "Парки", "Сотрудники", "Автомобили", "Клиенты", "Аренды", "Список клиентов", "Работа парков", "Списки автомобилей в парках", "Списки сотрудников в парках", "Автомобили по клиентам", "Автомобили по сотрудникам", "Аренда автомобиля" };
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (list2apd.Contains(f.Text))
+                        {
+                            ((Table)f).Apdate();
+                        }
+                    }
+                }
                 Close();
             }
         }

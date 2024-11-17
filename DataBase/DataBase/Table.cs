@@ -215,6 +215,7 @@ namespace DataBase
                 this.DelTable.Available = false;
             }
         }
+
         private void InsEdit(int param)
         {
             int rowCount = dataGridView1.RowCount;
@@ -307,7 +308,6 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
-                
                 case "Сотрудники":
                     {
                         insEditEmployee ed;
@@ -319,7 +319,6 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
-                
                 case "Клиенты":
                     {
                         insEditClient ed;
@@ -331,7 +330,6 @@ namespace DataBase
                         ed.ShowDialog();
                         break;
                     }
-                
                 case "Автомобили":
                     {
                         insEditAuto ed;
@@ -342,8 +340,7 @@ namespace DataBase
                         ed.Tag = param;
                         ed.ShowDialog();
                         break;
-                    }
-                
+                    }   
                 case "Аренды":
                     {
                         insEditRent ed;
@@ -408,6 +405,14 @@ namespace DataBase
                 a = new SQLiteDataAdapter(query, sc);
                 a.Fill(dt);
                 dataGridView1.DataSource = dt;
+                string[] list2apd = new string[] { "Парки", "Сотрудники", "Автомобили", "Клиенты", "Аренды", "Список клиентов", "Работа парков", "Списки автомобилей в парках", "Списки сотрудников в парках", "Автомобили по клиентам", "Автомобили по сотрудникам", "Аренда автомобиля" };
+                foreach (Form f in Application.OpenForms)
+                {
+                    if (list2apd.Contains(f.Text))
+                    {
+                        ((Table)f).Apdate();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -424,7 +429,7 @@ namespace DataBase
                     dataGridView1.Rows[CurrentIndex].Cells[dataGridView1.ColumnCount - 1];
             }
         }
-        /*
+  
         private void ReportTable_Click(object sender, EventArgs e)
         {
             int number = 0;
@@ -473,7 +478,14 @@ namespace DataBase
             CreateReport rep = new CreateReport(number, this.sc.ConnectionString);
             rep.Text = this.Name;
             rep.ShowDialog();
-        }*/
+        }
 
+        public void Apdate()
+        {
+            dt.Clear();
+            a = new SQLiteDataAdapter(query, sc);
+            a.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

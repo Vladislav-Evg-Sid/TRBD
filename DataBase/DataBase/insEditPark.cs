@@ -59,9 +59,9 @@ namespace DataBase
             comboBox1.ValueMember = tmp.Tables["City"].Columns["ID_City"].ToString();
             comboBox1.DataSource = tmp.Tables["City"];
             textBox1.Text = dr["Улица"].ToString();
-            maskedTextBox1.Text = dr["Номер дома"].ToString();
-            maskedTextBox2.Text = dr["Время начала работы"].ToString();
-            maskedTextBox3.Text = dr["Время окончания работы"].ToString();
+            textBox2.Text = dr["Номер дома"].ToString();
+            textBox3.Text = dr["Время начала работы"].ToString();
+            textBox4.Text = dr["Время окончания работы"].ToString();
             comboBox1.SelectedValue = dr["ID_City"];
             
 
@@ -73,22 +73,9 @@ namespace DataBase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text.Count() == 0) & (maskedTextBox1.Text.Count() == 0)& (maskedTextBox2.Text.Count() == 0) & (maskedTextBox3.Text.Count() == 0))
+            if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0)& (textBox3.Text.Count() == 0) & (textBox4.Text.Count() == 0))
             {
                 MessageBox.Show("Не все поля заполнены");
-            }
-            int street = int.Parse(maskedTextBox1.Text);
-            if (street < 1)
-            {
-                MessageBox.Show("Номер дома введен неверно!");
-            }
-            if (maskedTextBox2.Text.Count() < 5)
-            {
-                MessageBox.Show("Время начала работы введено неверно!");
-            }
-            if (maskedTextBox3.Text.Count() < 5)
-            {
-                MessageBox.Show("Время окончания работы введено неверно!");
             }
             else
             {
@@ -97,8 +84,8 @@ namespace DataBase
                 if ((int)Tag == 0)
                 {
                     command = new SQLiteCommand("INSERT INTO PARK (ID_City, Street, House_Number, Start_Time, End_Time) VALUES('"
-                        + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + textBox1.Text+ "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '" 
-                        + maskedTextBox3.Text + "')", sc);
+                        + int.Parse(comboBox1.SelectedValue.ToString()) + "', '" + textBox1.Text+ "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" 
+                        + textBox4.Text + "')", sc);
                 }
                 else
                 {
@@ -106,9 +93,9 @@ namespace DataBase
                         "WHERE ID_Park = ? ", sc);
                     command.Parameters.AddWithValue("ID_City",int.Parse(comboBox1.SelectedValue.ToString()));
                     command.Parameters.AddWithValue("@Street", textBox1.Text);
-                    command.Parameters.AddWithValue("@House_Number", maskedTextBox1.Text);
-                    command.Parameters.AddWithValue("@Start_Time", maskedTextBox2.Text);
-                    command.Parameters.AddWithValue("@End_Time", maskedTextBox3.Text);
+                    command.Parameters.AddWithValue("@House_Number", textBox2.Text);
+                    command.Parameters.AddWithValue("@Start_Time", textBox3.Text);
+                    command.Parameters.AddWithValue("@End_Time", textBox4.Text);
                     command.Parameters.AddWithValue("@ID_Park", dr[0]);
                 }
 
@@ -121,12 +108,6 @@ namespace DataBase
         {
             this.Close();
         }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Control | Keys.V))
