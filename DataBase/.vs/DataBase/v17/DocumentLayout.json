@@ -1,22 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\",
+  "WorkspaceRootPath": "C:\\Git\\BD5\\TRBD\\DataBase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|e:\\\u043F\u0440\u043E\u0433\u0438\\git\\\u043B\u0430\u0431\u044B\\database\\database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|c:\\git\\bd5\\trbd\\database\\database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditpark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditpark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditpark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditpark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditsprav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditauto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditauto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\database\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|C:\\Git\\BD5\\TRBD\\DataBase\\database\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\inseditrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C420B5C7-D5D1-4F71-8BF8-8C12B5C88076}|DataBase\\DataBase.csproj|solutionrelative:database\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,31 +62,143 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "insEditPark.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditPark.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditPark.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditPark.cs",
+              "RelativeToolTip": "DataBase\\insEditPark.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAASwE4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:55:32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "insEditPark.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditPark.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditPark.cs",
+              "ToolTip": "C:\\Git\\BD4\\TRBD\\DataBase\\DataBase\\insEditPark.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "..\\..\\..\\BD4\\TRBD\\DataBase\\DataBase\\insEditPark.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:55:30.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "insEditEmployee.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditEmployee.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs",
+              "RelativeToolTip": "DataBase\\insEditEmployee.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAIA8wHIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:49:28.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "insEditEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditEmployee.cs",
+              "ToolTip": "C:\\Git\\BD4\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "..\\..\\..\\BD4\\TRBD\\DataBase\\DataBase\\insEditEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:49:26.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "insEditAuto.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditAuto.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditAuto.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditAuto.cs",
+              "RelativeToolTip": "DataBase\\insEditAuto.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAWwL4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:04:17.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditAuto.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditAuto.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DataBase\\insEditAuto.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:04:15.365Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "insEditRent.cs [Design]",
-              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\insEditRent.cs",
-              "RelativeDocumentMoniker": "DataBase\\insEditRent.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\insEditRent.cs [Design]",
-              "RelativeToolTip": "DataBase\\insEditRent.cs [Design]",
+              "Title": "insEditClient.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditClient.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditClient.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditClient.cs",
+              "RelativeToolTip": "DataBase\\insEditClient.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAUwGYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T13:56:09.701Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-16T14:36:16.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "insEditClient.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditClient.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditClient.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditClient.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "DataBase\\insEditClient.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T14:36:13.462Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\Table.cs",
+              "RelativeDocumentMoniker": "DataBase\\Table.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\Table.cs",
+              "RelativeToolTip": "DataBase\\Table.cs",
+              "ViewState": "AgIAAEEBAAAAAAAAAAAUwGYBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T11:54:28.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\InsEditSprav.cs",
+              "RelativeDocumentMoniker": "DataBase\\InsEditSprav.cs",
+              "ToolTip": "C:\\Git\\BD4\\TRBD\\DataBase\\DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "..\\..\\..\\BD4\\TRBD\\DataBase\\DataBase\\InsEditSprav.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T16:22:48.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "insEditAuto.Designer.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditAuto.Designer.cs",
+              "RelativeDocumentMoniker": "DataBase\\insEditAuto.Designer.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditAuto.Designer.cs",
+              "RelativeToolTip": "DataBase\\insEditAuto.Designer.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwDoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:10:07.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "DataBase\\Form1.Designer.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\Form1.Designer.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\Form1.Designer.cs",
               "RelativeToolTip": "DataBase\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -58,28 +206,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "insEditRent.cs",
-              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\insEditRent.cs",
+              "DocumentMoniker": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditRent.cs",
               "RelativeDocumentMoniker": "DataBase\\insEditRent.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\insEditRent.cs",
+              "ToolTip": "C:\\Git\\BD5\\TRBD\\DataBase\\DataBase\\insEditRent.cs",
               "RelativeToolTip": "DataBase\\insEditRent.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAwwIgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAhwH8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T16:24:30.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Table.cs",
-              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\Table.cs",
-              "RelativeDocumentMoniker": "DataBase\\Table.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0433\u0438\\git\\\u041B\u0430\u0431\u044B\\DataBase\\DataBase\\Table.cs",
-              "RelativeToolTip": "DataBase\\Table.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAswKgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T11:54:28.434Z"
+              "WhenOpened": "2024-11-14T16:24:30.638Z"
             }
           ]
         }

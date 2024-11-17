@@ -424,6 +424,7 @@ namespace DataBase
                     dataGridView1.Rows[CurrentIndex].Cells[dataGridView1.ColumnCount - 1];
             }
         }
+        /*
         private void ReportTable_Click(object sender, EventArgs e)
         {
             int number = 0;
@@ -472,7 +473,7 @@ namespace DataBase
             CreateReport rep = new CreateReport(number, this.sc.ConnectionString);
             rep.Text = this.Name;
             rep.ShowDialog();
-        }
+        }*/
 
     }
 }

@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel;
-using Word = Microsoft.Office.Interop.Word;
+//using Excel = Microsoft.Office.Interop.Excel;
+//using Word = Microsoft.Office.Interop.Word;
 using PDF = Aspose.Pdf;
 using System.Data.SQLite;
 using Microsoft.Office.Core;
 using Aspose.Pdf.Text;
 using Aspose.Pdf.AI;
-
+/*
 namespace DataBase
 {
     public partial class CreateReport : Form
@@ -355,3 +355,4 @@ namespace DataBase
         }
     }
 }
+*/

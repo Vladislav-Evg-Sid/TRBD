@@ -1,4 +1,4 @@
-﻿namespace DataBase
+﻿/*namespace DataBase
 {
     partial class CreateReport
     {
@@ -128,3 +128,4 @@
         private System.Windows.Forms.ComboBox comboBox2;
     }
 }
+*/

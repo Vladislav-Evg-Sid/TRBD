@@ -51,10 +51,11 @@ namespace DataBase
             textBox1.Text = dr["Фамилия"].ToString();
             textBox2.Text = dr["Имя"].ToString();
             textBox3.Text = dr["Отчество"].ToString();
-            textBox4.Text = dr["ВУ"].ToString();
-            textBox5.Text = dr["Стаж"].ToString();
-            textBox6.Text = dr["Номер телефона"].ToString();
-            textBox7.Text = dr["Дата рождения"].ToString();
+            maskedTextBox1.Text = dr["ВУ"].ToString();
+            maskedTextBox2.Text = dr["Стаж"].ToString();
+            maskedTextBox3.Text = dr["Номер телефона"].ToString();
+            maskedTextBox4.Text = dr["Дата рождения"].ToString();
+           
 
 
 
@@ -62,11 +63,23 @@ namespace DataBase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0) & (textBox4.Text.Count() == 0) & (textBox5.Text.Count() == 0)
-                & (textBox6.Text.Count() == 0) & (textBox7.Text.Count() == 0))
+            if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0) & (maskedTextBox1.Text.Count() == 0) & (maskedTextBox2.Text.Count() == 0)
+                & (maskedTextBox3.Text.Count() == 0) & (maskedTextBox4.Text.Count() == 0))
 
             {
                 MessageBox.Show("Не все поля заполнены");
+            }
+            if ((maskedTextBox1.Text.Count() < 11))
+            {
+                MessageBox.Show("Водительсоке удостоверение не до конца заполнено!");
+            }
+            if ((maskedTextBox3.Text.Count() < 11))
+            {
+                MessageBox.Show("Номер не до конца заполнен!");
+            }
+            if ((maskedTextBox4.Text.Count() < 10))
+            {
+                MessageBox.Show("Дата рождения не до конца заполнена!");
             }
             else
             {
@@ -75,8 +88,8 @@ namespace DataBase
                 if ((int)Tag == 0)
                 {
                     command = new SQLiteCommand("INSERT INTO Client (Client_Surname, Client_Name, Client_Patronymic, License, Expirience, Phone_Number, Date_of_Birth) VALUES('"
-                        + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "', '"
-                        + textBox6.Text + "', '" + textBox7.Text + "')", sc);
+                        + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + maskedTextBox1.Text + "', '" + maskedTextBox2.Text + "', '"
+                        + maskedTextBox3.Text + "', '" + maskedTextBox4.Text + "')", sc);
                 }
                 else
                 {
@@ -85,10 +98,10 @@ namespace DataBase
                     command.Parameters.AddWithValue("@Client_Surname", textBox1.Text);
                     command.Parameters.AddWithValue("@Client_Name", textBox2.Text);
                     command.Parameters.AddWithValue("@Client_Patronymic", textBox3.Text);
-                    command.Parameters.AddWithValue("@License", textBox4.Text);
-                    command.Parameters.AddWithValue("@Expirience", textBox5.Text);
-                    command.Parameters.AddWithValue("@Phone_Number", textBox6.Text);
-                    command.Parameters.AddWithValue("@Date_of_Birth", textBox7.Text);
+                    command.Parameters.AddWithValue("@License", maskedTextBox1.Text);
+                    command.Parameters.AddWithValue("@Expirience", maskedTextBox2.Text);
+                    command.Parameters.AddWithValue("@Phone_Number", maskedTextBox3.Text);
+                    command.Parameters.AddWithValue("@Date_of_Birth", maskedTextBox4.Text);
                     command.Parameters.AddWithValue("@ID_Client", dr[0]);
                 }
 
@@ -106,6 +119,12 @@ namespace DataBase
         {
 
         }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Control | Keys.V))

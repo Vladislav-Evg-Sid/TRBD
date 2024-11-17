@@ -64,14 +64,14 @@ namespace DataBase
             textBox1.Text = dr["Фамилия"].ToString();
             textBox2.Text = dr["Имя"].ToString();
             textBox3.Text = dr["Отчество"].ToString();
-            textBox4.Text = dr["Паспорт"].ToString();
-            textBox5.Text = dr["ИНН"].ToString();
+            maskedTextBox1.Text = dr["Паспорт"].ToString();
+            maskedTextBox2.Text = dr["ИНН"].ToString();
             comboBox1.SelectedValue = dr["ID_Park"];
 
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void maskedTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -98,9 +98,17 @@ namespace DataBase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0) &  (textBox4.Text.Count() == 0) & (textBox5.Text.Count() == 0))
+            if ((textBox1.Text.Count() == 0) & (textBox2.Text.Count() == 0) &  (maskedTextBox1.Text.Count() == 0) & (maskedTextBox2.Text.Count() == 0))
             {
                 MessageBox.Show("Не все поля заполнены");
+            }
+            if (maskedTextBox1.Text.Count() < 11)
+            {
+                MessageBox.Show("Паспорт не до конца заполнен!");
+            }
+            if (maskedTextBox2.Text.Count() < 12)
+            {
+                MessageBox.Show("ИНН не до конца заполнен!");
             }
             else
             {
@@ -109,7 +117,7 @@ namespace DataBase
                 if ((int)Tag == 0)
                 {
                     command = new SQLiteCommand("INSERT INTO Employee (Employee_Surname, Employee_Name, Employee_Patronymic, Passport, INN, ID_Park) VALUES('"
-                        + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" +textBox5.Text + "', '"
+                        + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + maskedTextBox1.Text + "', '" +maskedTextBox2.Text + "', '"
                         + int.Parse(comboBox1.SelectedValue.ToString()) + "')", sc);
                 }
                 else
@@ -119,8 +127,8 @@ namespace DataBase
                     command.Parameters.AddWithValue("@Employee_Surname", textBox1.Text);
                     command.Parameters.AddWithValue("@Employee_Name", textBox2.Text);
                     command.Parameters.AddWithValue("@Employee_Patronymic", textBox3.Text);
-                    command.Parameters.AddWithValue("@Passport", textBox4.Text);
-                    command.Parameters.AddWithValue("@INN", textBox5.Text);
+                    command.Parameters.AddWithValue("@Passport", maskedTextBox1.Text);
+                    command.Parameters.AddWithValue("@INN", maskedTextBox2.Text);
                     command.Parameters.AddWithValue("ID_Park", int.Parse(comboBox1.SelectedValue.ToString()));
                     command.Parameters.AddWithValue("@ID_Employee", dr[0]);
                 }
@@ -140,7 +148,12 @@ namespace DataBase
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void maskedTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insEditEmployee_Load(object sender, EventArgs e)
         {
 
         }
